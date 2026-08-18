@@ -1,0 +1,231 @@
+{
+  "summary": {
+    "sampleApps": 20,
+    "fields": 100,
+    "firstPassCorrect": 76,
+    "afterValidatorsCorrect": 93,
+    "finalCorrect": 100
+  },
+  "sample": [
+    {
+      "appId": 1,
+      "app": "Salesforce",
+      "fieldsChecked": ["auth", "access", "API surface", "MCP", "verdict"],
+      "firstPassCorrect": 4,
+      "afterValidatorsCorrect": 5,
+      "finalCorrect": 5,
+      "result": "PASS",
+      "correction": "Native hosted MCP was initially mislabeled as community.",
+      "source": "https://developer.salesforce.com/docs/platform/mcp/overview"
+    },
+    {
+      "appId": 8,
+      "app": "Close",
+      "fieldsChecked": ["auth", "access", "API surface", "MCP", "verdict"],
+      "firstPassCorrect": 4,
+      "afterValidatorsCorrect": 5,
+      "finalCorrect": 5,
+      "result": "PASS",
+      "correction": "Confirmed API-key auth and first-party MCP.",
+      "source": "https://developer.close.com/mcp"
+    },
+    {
+      "appId": 11,
+      "app": "Zendesk",
+      "fieldsChecked": ["auth", "access", "API surface", "MCP", "verdict"],
+      "firstPassCorrect": 5,
+      "afterValidatorsCorrect": 5,
+      "finalCorrect": 5,
+      "result": "PASS",
+      "correction": "Broad API confirmed; no vendor-native MCP found in official docs.",
+      "source": "https://developer.zendesk.com/documentation/api-basics/authentication/"
+    },
+    {
+      "appId": 17,
+      "app": "Plain",
+      "fieldsChecked": ["auth", "access", "API surface", "MCP", "verdict"],
+      "firstPassCorrect": 4,
+      "afterValidatorsCorrect": 5,
+      "finalCorrect": 5,
+      "result": "PASS",
+      "correction": "Corrected API style to GraphQL and replaced two stale documentation paths with current official sources.",
+      "source": "https://help.plain.com/article/mcp-server"
+    },
+    {
+      "appId": 21,
+      "app": "Slack",
+      "fieldsChecked": ["auth", "access", "API surface", "MCP", "verdict"],
+      "firstPassCorrect": 5,
+      "afterValidatorsCorrect": 5,
+      "finalCorrect": 5,
+      "result": "PASS",
+      "correction": "Corrected community MCP to Slack-hosted MCP.",
+      "source": "https://api.slack.com/mcp"
+    },
+    {
+      "appId": 28,
+      "app": "WhatsApp Business",
+      "fieldsChecked": ["auth", "access", "API surface", "MCP", "verdict"],
+      "firstPassCorrect": 3,
+      "afterValidatorsCorrect": 4,
+      "finalCorrect": 5,
+      "result": "PASS",
+      "correction": "Separated Meta developer-docs MCP from WhatsApp account actions and retained reviewed production access.",
+      "source": "https://developers.facebook.com/docs/development/mcp"
+    },
+    {
+      "appId": 33,
+      "app": "LinkedIn Ads",
+      "fieldsChecked": ["auth", "access", "API surface", "MCP", "verdict"],
+      "firstPassCorrect": 4,
+      "afterValidatorsCorrect": 5,
+      "finalCorrect": 5,
+      "result": "PASS",
+      "correction": "Confirmed Marketing API product approval is required.",
+      "source": "https://learn.microsoft.com/en-us/linkedin/marketing/increasing-access"
+    },
+    {
+      "appId": 41,
+      "app": "Shopify",
+      "fieldsChecked": ["auth", "access", "API surface", "MCP", "verdict"],
+      "firstPassCorrect": 2,
+      "afterValidatorsCorrect": 4,
+      "finalCorrect": 5,
+      "result": "PASS",
+      "correction": "Corrected to GraphQL-first and separated storefront MCP from Admin API.",
+      "source": "https://shopify.dev/docs/apps/build/storefront-mcp"
+    },
+    {
+      "appId": 49,
+      "app": "Amazon Selling Partner",
+      "fieldsChecked": ["auth", "access", "API surface", "MCP", "verdict"],
+      "firstPassCorrect": 2,
+      "afterValidatorsCorrect": 4,
+      "finalCorrect": 5,
+      "result": "PASS",
+      "correction": "Corrected access gate and LWA plus restricted-data auth model.",
+      "source": "https://developer-docs.amazon.com/sp-api/docs"
+    },
+    {
+      "appId": 53,
+      "app": "Ahrefs",
+      "fieldsChecked": ["auth", "access", "API surface", "MCP", "verdict"],
+      "firstPassCorrect": 4,
+      "afterValidatorsCorrect": 5,
+      "finalCorrect": 5,
+      "result": "PASS",
+      "correction": "Corrected access from sales-gated to paid-plan entitlement and native MCP.",
+      "source": "https://docs.ahrefs.com/en/mcp/overview"
+    },
+    {
+      "appId": 56,
+      "app": "Firecrawl",
+      "fieldsChecked": ["auth", "access", "API surface", "MCP", "verdict"],
+      "firstPassCorrect": 5,
+      "afterValidatorsCorrect": 5,
+      "finalCorrect": 5,
+      "result": "PASS",
+      "correction": "No correction after source review.",
+      "source": "https://docs.firecrawl.dev/mcp-server"
+    },
+    {
+      "appId": 61,
+      "app": "GitHub",
+      "fieldsChecked": ["auth", "access", "API surface", "MCP", "verdict"],
+      "firstPassCorrect": 5,
+      "afterValidatorsCorrect": 5,
+      "finalCorrect": 5,
+      "result": "PASS",
+      "correction": "No correction after source review.",
+      "source": "https://github.com/github/github-mcp-server"
+    },
+    {
+      "appId": 67,
+      "app": "Snowflake",
+      "fieldsChecked": ["auth", "access", "API surface", "MCP", "verdict"],
+      "firstPassCorrect": 3,
+      "afterValidatorsCorrect": 4,
+      "finalCorrect": 5,
+      "result": "PASS",
+      "correction": "Expanded auth beyond API key and checked managed Cortex MCP.",
+      "source": "https://docs.snowflake.com/en/user-guide/snowflake-cortex/cortex-agents-mcp"
+    },
+    {
+      "appId": 71,
+      "app": "Notion",
+      "fieldsChecked": ["auth", "access", "API surface", "MCP", "verdict"],
+      "firstPassCorrect": 5,
+      "afterValidatorsCorrect": 5,
+      "finalCorrect": 5,
+      "result": "PASS",
+      "correction": "No correction after source review.",
+      "source": "https://developers.notion.com/guides/mcp/overview"
+    },
+    {
+      "appId": 74,
+      "app": "Jira",
+      "fieldsChecked": ["auth", "access", "API surface", "MCP", "verdict"],
+      "firstPassCorrect": 4,
+      "afterValidatorsCorrect": 5,
+      "finalCorrect": 5,
+      "result": "PASS",
+      "correction": "Corrected community label to Atlassian Rovo MCP.",
+      "source": "https://developer.atlassian.com/platform/remote-mcp-server/"
+    },
+    {
+      "appId": 81,
+      "app": "Stripe",
+      "fieldsChecked": ["auth", "access", "API surface", "MCP", "verdict"],
+      "firstPassCorrect": 5,
+      "afterValidatorsCorrect": 5,
+      "finalCorrect": 5,
+      "result": "PASS",
+      "correction": "No correction after source review.",
+      "source": "https://docs.stripe.com/mcp"
+    },
+    {
+      "appId": 91,
+      "app": "NotebookLM",
+      "fieldsChecked": ["auth", "access", "API surface", "MCP", "verdict"],
+      "firstPassCorrect": 2,
+      "afterValidatorsCorrect": 4,
+      "finalCorrect": 5,
+      "result": "PASS",
+      "correction": "Corrected consumer-product assumption to Gemini Enterprise v1alpha API.",
+      "source": "https://cloud.google.com/gemini/enterprise/docs/authentication"
+    },
+    {
+      "appId": 92,
+      "app": "Otter AI",
+      "fieldsChecked": ["auth", "access", "API surface", "MCP", "verdict"],
+      "firstPassCorrect": 2,
+      "afterValidatorsCorrect": 4,
+      "finalCorrect": 5,
+      "result": "PASS",
+      "correction": "Removed invented public REST API and kept official support-gated MCP.",
+      "source": "https://help.otter.ai/hc/en-us/articles/35287607569687-Otter-MCP-Server"
+    },
+    {
+      "appId": 94,
+      "app": "Consensus",
+      "fieldsChecked": ["auth", "access", "API surface", "MCP", "verdict"],
+      "firstPassCorrect": 3,
+      "afterValidatorsCorrect": 4,
+      "finalCorrect": 5,
+      "result": "PASS",
+      "correction": "Separated the self-serve OAuth MCP from separately request-gated API access.",
+      "source": "https://consensus.app/home/mcp"
+    },
+    {
+      "appId": 96,
+      "app": "Devin",
+      "fieldsChecked": ["auth", "access", "API surface", "MCP", "verdict"],
+      "firstPassCorrect": 5,
+      "afterValidatorsCorrect": 5,
+      "finalCorrect": 5,
+      "result": "PASS",
+      "correction": "Confirmed service-user key and first-party MCP.",
+      "source": "https://docs.devin.ai/integrations/mcp"
+    }
+  ]
+}

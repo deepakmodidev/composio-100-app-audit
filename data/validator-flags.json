@@ -1,0 +1,51 @@
+[
+  {
+    "appId": 12,
+    "app": "Intercom",
+    "severity": "review",
+    "rule": "ready-gate",
+    "detail": "Ready verdict may understate a production gate."
+  },
+  {
+    "appId": 43,
+    "app": "BigCommerce",
+    "severity": "review",
+    "rule": "ready-gate",
+    "detail": "Ready verdict may understate a production gate."
+  },
+  {
+    "appId": 47,
+    "app": "Ecwid",
+    "severity": "review",
+    "rule": "mcp-provenance",
+    "detail": "Scope implies a vendor surface but provenance is not Official."
+  },
+  {
+    "appId": 48,
+    "app": "Gumroad",
+    "severity": "review",
+    "rule": "mcp-provenance",
+    "detail": "Scope implies a vendor surface but provenance is not Official."
+  },
+  {
+    "appId": 58,
+    "app": "Sherlock",
+    "severity": "review",
+    "rule": "high-confidence-single-source",
+    "detail": "High confidence rests on one source."
+  },
+  {
+    "appId": 92,
+    "app": "Otter AI",
+    "severity": "review",
+    "rule": "high-confidence-single-source",
+    "detail": "High confidence rests on one source."
+  },
+  {
+    "appId": 98,
+    "app": "Mermaid CLI",
+    "severity": "review",
+    "rule": "high-confidence-single-source",
+    "detail": "High confidence rests on one source."
+  }
+]

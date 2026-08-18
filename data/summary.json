@@ -1,0 +1,61 @@
+{
+  "generatedAt": "2026-08-18",
+  "apps": 100,
+  "verdicts": {
+    "Ready with constraints": 38,
+    "Ready": 57,
+    "Blocked": 5
+  },
+  "access": {
+    "Admin/paid": 26,
+    "Self-serve": 51,
+    "Open-source/local": 5,
+    "Partner/sales": 7,
+    "Review/approval": 11
+  },
+  "auth": {
+    "Mixed": 62,
+    "OAuth2": 17,
+    "API key": 10,
+    "Token": 5,
+    "Other": 3,
+    "Basic": 1,
+    "None": 2
+  },
+  "mcp": {
+    "Official": 71,
+    "None": 25,
+    "Community": 2,
+    "Local skill": 2
+  },
+  "mcpScope": {
+    "Action": 60,
+    "None": 25,
+    "Developer": 2,
+    "Docs-only": 4,
+    "Local action": 3,
+    "Read-only": 1,
+    "Limited action": 2,
+    "Storefront": 2,
+    "Platform bridge": 1
+  },
+  "priority": {
+    "Pilot with guardrails": 39,
+    "Easy win": 56,
+    "Outreach first": 5
+  },
+  "confidence": {
+    "High": 92,
+    "Medium": 6,
+    "Low": 2
+  },
+  "oauthPresent": 71,
+  "officialActionMcp": 58,
+  "verification": {
+    "sampleApps": 20,
+    "fields": 100,
+    "firstPassCorrect": 76,
+    "afterValidatorsCorrect": 93,
+    "finalCorrect": 100
+  }
+}

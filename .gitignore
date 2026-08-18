@@ -1,0 +1,7 @@
+node_modules
+.env
+dist
+data/agent-output.json
+data/browser-check.json
+__pycache__/
+*.py[cod]

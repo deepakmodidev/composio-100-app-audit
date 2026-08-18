@@ -1,0 +1,33 @@
+{
+  "name": "composio-100-app-audit",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/deepakmodidev/composio-100-app-audit.git"
+  },
+  "homepage": "https://deepakmodidev.github.io/composio-100-app-audit/",
+  "scripts": {
+    "demo": "node scripts/analyze.mjs",
+    "research": "tsx src/research-agent.ts",
+    "validate": "node scripts/validate.mjs",
+    "verify": "playwright install chromium && tsx src/verify.ts",
+    "pipeline": "npm run research && npm run validate && npm run verify",
+    "stats": "tsx src/build-report.ts",
+    "serve": "npx serve ."
+  },
+  "dependencies": {
+    "@composio/core": "latest",
+    "@composio/openai": "latest",
+    "dotenv": "latest",
+    "openai": "latest",
+    "zod": "latest"
+  },
+  "devDependencies": {
+    "@types/node": "latest",
+    "playwright": "latest",
+    "tsx": "latest",
+    "typescript": "latest"
+  }
+}

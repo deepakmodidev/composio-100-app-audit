@@ -1,0 +1,3414 @@
+[
+  {
+    "id": 1,
+    "name": "Salesforce",
+    "slug": "salesforce",
+    "category": "CRM and Sales",
+    "site": "https://salesforce.com",
+    "what": "Enterprise CRM for accounts, leads, opportunities, cases, activities, and custom objects.",
+    "primaryAuth": "Mixed",
+    "authMethods": ["OAuth2", "JWT bearer", "client credentials"],
+    "access": "Admin/paid",
+    "accessDetail": "Developer orgs are self-serve, but useful production credentials and scopes require a Salesforce tenant and administrator.",
+    "apiStyle": ["REST", "SOAP", "GraphQL", "Bulk", "Streaming"],
+    "breadth": "Broad",
+    "mcp": "Official",
+    "mcpScope": "Action",
+    "verdict": "Ready with constraints",
+    "blocker": "Tenant administration, object permissions, security review, and high-risk write actions.",
+    "confidence": "High",
+    "evidence": [
+      {
+        "label": "Source 1",
+        "url": "https://developer.salesforce.com/docs/platform/mobile-sdk/guide/oauth-intro.html"
+      },
+      {
+        "label": "Source 2",
+        "url": "https://developer.salesforce.com/docs/platform/mcp/overview"
+      }
+    ],
+    "notes": "Hosted MCP became generally available in 2026.",
+    "verifiedAt": "2026-08-18",
+    "priority": "Pilot with guardrails",
+    "nativeMcp": true,
+    "sourceQuality": "Official-first"
+  },
+  {
+    "id": 2,
+    "name": "HubSpot",
+    "slug": "hubspot",
+    "category": "CRM and Sales",
+    "site": "https://hubspot.com",
+    "what": "CRM and marketing platform for contacts, companies, deals, tickets, activities, and content.",
+    "primaryAuth": "Mixed",
+    "authMethods": ["OAuth2", "private app token"],
+    "access": "Self-serve",
+    "accessDetail": "Free developer accounts, test accounts, private apps, and OAuth apps are available without sales contact.",
+    "apiStyle": ["REST", "Webhooks"],
+    "breadth": "Broad",
+    "mcp": "Official",
+    "mcpScope": "Action",
+    "verdict": "Ready",
+    "blocker": "Sensitive-data restrictions, user permissions, rate limits, and confirmation for writes.",
+    "confidence": "High",
+    "evidence": [
+      {
+        "label": "Source 1",
+        "url": "https://developers.hubspot.com/docs/guides/apps/authentication/intro-to-auth"
+      },
+      {
+        "label": "Source 2",
+        "url": "https://developers.hubspot.com/changelog/remote-hubspot-mcp-server-is-now-generally-available"
+      }
+    ],
+    "notes": "Remote MCP is GA with read and write capabilities.",
+    "verifiedAt": "2026-08-18",
+    "priority": "Easy win",
+    "nativeMcp": true,
+    "sourceQuality": "Official-first"
+  },
+  {
+    "id": 3,
+    "name": "Pipedrive",
+    "slug": "pipedrive",
+    "category": "CRM and Sales",
+    "site": "https://pipedrive.com",
+    "what": "Sales CRM for deals, leads, people, organizations, activities, products, projects, and webhooks.",
+    "primaryAuth": "Mixed",
+    "authMethods": ["OAuth2", "API token"],
+    "access": "Self-serve",
+    "accessDetail": "A developer sandbox can be requested and API tokens are available in customer accounts.",
+    "apiStyle": ["REST", "Webhooks", "OpenAPI"],
+    "breadth": "Broad",
+    "mcp": "None",
+    "mcpScope": "None",
+    "verdict": "Ready",
+    "blocker": "No vendor-native MCP verified, but the broad OpenAPI surface is straightforward to wrap.",
+    "confidence": "High",
+    "evidence": [
+      {
+        "label": "Source 1",
+        "url": "https://developers.pipedrive.com/"
+      },
+      {
+        "label": "Source 2",
+        "url": "https://developers.pipedrive.com/docs/api/v1"
+      }
+    ],
+    "notes": "Marketplace distribution needs app review.",
+    "verifiedAt": "2026-08-18",
+    "priority": "Easy win",
+    "nativeMcp": false,
+    "sourceQuality": "Official-first"
+  },
+  {
+    "id": 4,
+    "name": "Attio",
+    "slug": "attio",
+    "category": "CRM and Sales",
+    "site": "https://attio.com",
+    "what": "Flexible CRM for people, companies, deals, lists, notes, tasks, meetings, and custom objects.",
+    "primaryAuth": "Mixed",
+    "authMethods": ["OAuth2", "API key"],
+    "access": "Self-serve",
+    "accessDetail": "Developers can create workspaces and API integrations directly.",
+    "apiStyle": ["REST", "Webhooks"],
+    "breadth": "Broad",
+    "mcp": "Official",
+    "mcpScope": "Action",
+    "verdict": "Ready",
+    "blocker": "Write confirmations, workspace permissions, and bulk-operation guardrails.",
+    "confidence": "High",
+    "evidence": [
+      {
+        "label": "Source 1",
+        "url": "https://docs.attio.com/rest-api/overview"
+      },
+      {
+        "label": "Source 2",
+        "url": "https://docs.attio.com/mcp/overview"
+      }
+    ],
+    "notes": "Hosted MCP uses OAuth and covers most workspace objects.",
+    "verifiedAt": "2026-08-18",
+    "priority": "Easy win",
+    "nativeMcp": true,
+    "sourceQuality": "Official-first"
+  },
+  {
+    "id": 5,
+    "name": "Twenty",
+    "slug": "twenty",
+    "category": "CRM and Sales",
+    "site": "https://twenty.com",
+    "what": "Open-source CRM for people, companies, opportunities, activities, workflows, and custom objects.",
+    "primaryAuth": "Mixed",
+    "authMethods": ["OAuth2", "API key"],
+    "access": "Open-source/local",
+    "accessDetail": "Self-hosting and cloud workspaces are available, with credentials controlled by the workspace owner.",
+    "apiStyle": ["REST", "GraphQL", "Webhooks"],
+    "breadth": "Broad",
+    "mcp": "Official",
+    "mcpScope": "Action",
+    "verdict": "Ready",
+    "blocker": "Self-hosted version drift, permissions, and destructive write operations.",
+    "confidence": "High",
+    "evidence": [
+      {
+        "label": "Source 1",
+        "url": "https://docs.twenty.com/developers"
+      },
+      {
+        "label": "Source 2",
+        "url": "https://docs.twenty.com/user-guide/ai/capabilities/mcp"
+      }
+    ],
+    "notes": "Cloud and self-hosted workspaces expose an MCP endpoint.",
+    "verifiedAt": "2026-08-18",
+    "priority": "Easy win",
+    "nativeMcp": true,
+    "sourceQuality": "Official-first"
+  },
+  {
+    "id": 6,
+    "name": "Podio",
+    "slug": "podio",
+    "category": "CRM and Sales",
+    "site": "https://podio.com",
+    "what": "Customizable work platform for apps, items, tasks, contacts, conversations, files, and workflows.",
+    "primaryAuth": "OAuth2",
+    "authMethods": ["OAuth2"],
+    "access": "Admin/paid",
+    "accessDetail": "API clients are self-created, but meaningful testing needs a Podio workspace and administrator-approved app access.",
+    "apiStyle": ["REST", "Webhooks"],
+    "breadth": "Broad",
+    "mcp": "None",
+    "mcpScope": "None",
+    "verdict": "Ready with constraints",
+    "blocker": "Legacy platform patterns, workspace permissions, and no vendor-native MCP verified.",
+    "confidence": "High",
+    "evidence": [
+      {
+        "label": "Source 1",
+        "url": "https://developers.podio.com/authentication"
+      },
+      {
+        "label": "Source 2",
+        "url": "https://developers.podio.com/doc"
+      }
+    ],
+    "notes": "Stable API, but older developer experience.",
+    "verifiedAt": "2026-08-18",
+    "priority": "Pilot with guardrails",
+    "nativeMcp": false,
+    "sourceQuality": "Official-first"
+  },
+  {
+    "id": 7,
+    "name": "Zoho CRM",
+    "slug": "zoho-crm",
+    "category": "CRM and Sales",
+    "site": "https://zoho.com/crm",
+    "what": "CRM for leads, contacts, accounts, deals, activities, automation, analytics, and custom modules.",
+    "primaryAuth": "OAuth2",
+    "authMethods": ["OAuth2"],
+    "access": "Self-serve",
+    "accessDetail": "Zoho API Console and trial CRM accounts provide a self-serve credential path.",
+    "apiStyle": ["REST", "Bulk", "Notifications"],
+    "breadth": "Broad",
+    "mcp": "Official",
+    "mcpScope": "Action",
+    "verdict": "Ready",
+    "blocker": "Multi-region domains, scopes, edition limits, and confirmation for record mutations.",
+    "confidence": "High",
+    "evidence": [
+      {
+        "label": "Source 1",
+        "url": "https://www.zoho.com/crm/developer/docs/api/v7/oauth-overview.html"
+      },
+      {
+        "label": "Source 2",
+        "url": "https://www.zoho.com/crm/developer/docs/mcp/overview.html"
+      }
+    ],
+    "notes": "Zoho ships pre-built MCP servers for data and automation.",
+    "verifiedAt": "2026-08-18",
+    "priority": "Easy win",
+    "nativeMcp": true,
+    "sourceQuality": "Official-first"
+  },
+  {
+    "id": 8,
+    "name": "Close",
+    "slug": "close",
+    "category": "CRM and Sales",
+    "site": "https://close.com",
+    "what": "Sales CRM for leads, contacts, opportunities, email, calls, SMS, tasks, and reporting.",
+    "primaryAuth": "API key",
+    "authMethods": ["Basic with API key"],
+    "access": "Admin/paid",
+    "accessDetail": "API keys are generated in a Close account, and a free trial can be used for evaluation.",
+    "apiStyle": ["REST", "Webhooks"],
+    "breadth": "Broad",
+    "mcp": "Official",
+    "mcpScope": "Action",
+    "verdict": "Ready",
+    "blocker": "Customer communications, calling costs, permissions, and write confirmation.",
+    "confidence": "High",
+    "evidence": [
+      {
+        "label": "Source 1",
+        "url": "https://developer.close.com/topics/authentication/"
+      },
+      {
+        "label": "Source 2",
+        "url": "https://developer.close.com/mcp"
+      }
+    ],
+    "notes": "First-party MCP is available for account data and actions.",
+    "verifiedAt": "2026-08-18",
+    "priority": "Pilot with guardrails",
+    "nativeMcp": true,
+    "sourceQuality": "Official-first"
+  },
+  {
+    "id": 9,
+    "name": "Copper",
+    "slug": "copper",
+    "category": "CRM and Sales",
+    "site": "https://copper.com",
+    "what": "Google Workspace-oriented CRM for people, companies, opportunities, activities, projects, and tasks.",
+    "primaryAuth": "API key",
+    "authMethods": ["API key plus user email"],
+    "access": "Admin/paid",
+    "accessDetail": "Credentials require a Copper account and administrator access.",
+    "apiStyle": ["REST", "Webhooks"],
+    "breadth": "Broad",
+    "mcp": "None",
+    "mcpScope": "None",
+    "verdict": "Ready with constraints",
+    "blocker": "Paid tenant, admin credentials, rate limits, and no vendor-native MCP verified.",
+    "confidence": "High",
+    "evidence": [
+      {
+        "label": "Source 1",
+        "url": "https://developer.copper.com/authentication"
+      },
+      {
+        "label": "Source 2",
+        "url": "https://developer.copper.com/"
+      }
+    ],
+    "notes": "API is usable for a custom toolkit.",
+    "verifiedAt": "2026-08-18",
+    "priority": "Pilot with guardrails",
+    "nativeMcp": false,
+    "sourceQuality": "Official-first"
+  },
+  {
+    "id": 10,
+    "name": "DealCloud",
+    "slug": "dealcloud",
+    "category": "CRM and Sales",
+    "site": "https://api.docs.dealcloud.com",
+    "what": "Deal and relationship-management platform for investment and professional-services firms.",
+    "primaryAuth": "Mixed",
+    "authMethods": ["OAuth2", "issued credentials"],
+    "access": "Partner/sales",
+    "accessDetail": "API access is tied to a contracted DealCloud tenant and provisioned by administrators or support.",
+    "apiStyle": ["REST"],
+    "breadth": "Broad",
+    "mcp": "None",
+    "mcpScope": "None",
+    "verdict": "Blocked",
+    "blocker": "Enterprise contract, tenant configuration, and no public self-serve sandbox.",
+    "confidence": "High",
+    "evidence": [
+      {
+        "label": "Source 1",
+        "url": "https://api.docs.dealcloud.com/"
+      },
+      {
+        "label": "Source 2",
+        "url": "https://api.docs.dealcloud.com/docs/authentication"
+      }
+    ],
+    "notes": "Correct candidate for outreach, not reverse engineering.",
+    "verifiedAt": "2026-08-18",
+    "priority": "Outreach first",
+    "nativeMcp": false,
+    "sourceQuality": "Official-first"
+  },
+  {
+    "id": 11,
+    "name": "Zendesk",
+    "slug": "zendesk",
+    "category": "Support and Helpdesk",
+    "site": "https://zendesk.com",
+    "what": "Customer-service platform for tickets, users, organizations, help center, messaging, voice, and routing.",
+    "primaryAuth": "Mixed",
+    "authMethods": ["OAuth2", "API token", "Basic"],
+    "access": "Admin/paid",
+    "accessDetail": "Trials exist, but OAuth clients and production tokens require a Zendesk tenant and admin rights.",
+    "apiStyle": ["REST", "Webhooks", "Events"],
+    "breadth": "Broad",
+    "mcp": "None",
+    "mcpScope": "None",
+    "verdict": "Ready with constraints",
+    "blocker": "Tenant administration, complex product surfaces, customer-data sensitivity, and no native MCP verified.",
+    "confidence": "High",
+    "evidence": [
+      {
+        "label": "Source 1",
+        "url": "https://developer.zendesk.com/documentation/"
+      },
+      {
+        "label": "Source 2",
+        "url": "https://developer.zendesk.com/documentation/api-basics/authentication/"
+      }
+    ],
+    "notes": "Excellent API breadth makes it a high-value custom toolkit.",
+    "verifiedAt": "2026-08-18",
+    "priority": "Pilot with guardrails",
+    "nativeMcp": false,
+    "sourceQuality": "Official-first"
+  },
+  {
+    "id": 12,
+    "name": "Intercom",
+    "slug": "intercom",
+    "category": "Support and Helpdesk",
+    "site": "https://intercom.com",
+    "what": "Customer support and engagement platform for contacts, conversations, tickets, articles, teams, and messages.",
+    "primaryAuth": "Mixed",
+    "authMethods": ["OAuth2", "access token"],
+    "access": "Self-serve",
+    "accessDetail": "Developer workspaces and apps are self-serve; customer installs use OAuth.",
+    "apiStyle": ["REST", "Webhooks"],
+    "breadth": "Broad",
+    "mcp": "Official",
+    "mcpScope": "Action",
+    "verdict": "Ready",
+    "blocker": "Workspace permissions, customer-message safety, app review for distribution, and rate limits.",
+    "confidence": "High",
+    "evidence": [
+      {
+        "label": "Source 1",
+        "url": "https://developers.intercom.com/docs/build-an-integration/learn-more/authentication"
+      },
+      {
+        "label": "Source 2",
+        "url": "https://developers.intercom.com/docs/guides/mcp"
+      }
+    ],
+    "notes": "Vendor MCP supports agent access to Intercom data.",
+    "verifiedAt": "2026-08-18",
+    "priority": "Easy win",
+    "nativeMcp": true,
+    "sourceQuality": "Official-first"
+  },
+  {
+    "id": 13,
+    "name": "Freshdesk",
+    "slug": "freshdesk",
+    "category": "Support and Helpdesk",
+    "site": "https://freshdesk.com",
+    "what": "Helpdesk for tickets, contacts, agents, companies, groups, solutions, conversations, and time entries.",
+    "primaryAuth": "Mixed",
+    "authMethods": ["API key", "OAuth2"],
+    "access": "Self-serve",
+    "accessDetail": "Free trials and API keys provide a direct testing path.",
+    "apiStyle": ["REST", "Webhooks"],
+    "breadth": "Broad",
+    "mcp": "None",
+    "mcpScope": "None",
+    "verdict": "Ready",
+    "blocker": "No vendor-native MCP verified; normalize product editions and enforce ticket-write guardrails.",
+    "confidence": "High",
+    "evidence": [
+      {
+        "label": "Source 1",
+        "url": "https://developers.freshdesk.com/api/"
+      },
+      {
+        "label": "Source 2",
+        "url": "https://developers.freshworks.com/docs/app-sdk/v3.0/support_ticket/serverless-apps/oauth/"
+      }
+    ],
+    "notes": "Easy custom wrapper candidate.",
+    "verifiedAt": "2026-08-18",
+    "priority": "Easy win",
+    "nativeMcp": false,
+    "sourceQuality": "Official-first"
+  },
+  {
+    "id": 14,
+    "name": "Front",
+    "slug": "front",
+    "category": "Support and Helpdesk",
+    "site": "https://front.com",
+    "what": "Shared-inbox and customer-operations platform for conversations, messages, contacts, inboxes, tags, and rules.",
+    "primaryAuth": "Mixed",
+    "authMethods": ["OAuth2", "API token"],
+    "access": "Admin/paid",
+    "accessDetail": "A Front tenant is needed; OAuth app setup requires administrator configuration.",
+    "apiStyle": ["REST", "Webhooks"],
+    "breadth": "Broad",
+    "mcp": "Official",
+    "mcpScope": "Action",
+    "verdict": "Ready with constraints",
+    "blocker": "OAuth client compatibility, teammate permissions, messaging risk, and beta maturity.",
+    "confidence": "High",
+    "evidence": [
+      {
+        "label": "Source 1",
+        "url": "https://dev.frontapp.com/docs/authentication"
+      },
+      {
+        "label": "Source 2",
+        "url": "https://dev.frontapp.com/docs/mcp-server"
+      }
+    ],
+    "notes": "Official MCP is in open beta with read, write, and send scopes.",
+    "verifiedAt": "2026-08-18",
+    "priority": "Pilot with guardrails",
+    "nativeMcp": true,
+    "sourceQuality": "Official-first"
+  },
+  {
+    "id": 15,
+    "name": "Pylon",
+    "slug": "pylon",
+    "category": "Support and Helpdesk",
+    "site": "https://usepylon.com",
+    "what": "B2B support platform for tickets, customer accounts, Slack and Teams channels, knowledge, and workflows.",
+    "primaryAuth": "Mixed",
+    "authMethods": ["OAuth2", "API key"],
+    "access": "Admin/paid",
+    "accessDetail": "API and MCP access require an active Pylon workspace and administrator setup.",
+    "apiStyle": ["REST", "Webhooks"],
+    "breadth": "Moderate",
+    "mcp": "Official",
+    "mcpScope": "Action",
+    "verdict": "Ready with constraints",
+    "blocker": "Paid workspace, admin setup, evolving docs, and customer-support data.",
+    "confidence": "High",
+    "evidence": [
+      {
+        "label": "Source 1",
+        "url": "https://docs.usepylon.com/pylon-docs/api-reference/authentication"
+      },
+      {
+        "label": "Source 2",
+        "url": "https://docs.usepylon.com/pylon-docs/integrations/pylon-mcp"
+      }
+    ],
+    "notes": "Native MCP is available to workspace users.",
+    "verifiedAt": "2026-08-18",
+    "priority": "Pilot with guardrails",
+    "nativeMcp": true,
+    "sourceQuality": "Official-first"
+  },
+  {
+    "id": 16,
+    "name": "LiveAgent",
+    "slug": "liveagent",
+    "category": "Support and Helpdesk",
+    "site": "https://liveagent.com",
+    "what": "Helpdesk platform for tickets, chats, calls, contacts, departments, knowledge base, and reports.",
+    "primaryAuth": "API key",
+    "authMethods": ["API key"],
+    "access": "Self-serve",
+    "accessDetail": "A trial account exposes API credentials.",
+    "apiStyle": ["REST", "Webhooks"],
+    "breadth": "Broad",
+    "mcp": "Official",
+    "mcpScope": "Action",
+    "verdict": "Ready",
+    "blocker": "Versioned endpoints, ticket-write confirmation, and role-based permissions.",
+    "confidence": "High",
+    "evidence": [
+      {
+        "label": "Source 1",
+        "url": "https://support.liveagent.com/840138-Complete-API-reference"
+      },
+      {
+        "label": "Source 2",
+        "url": "https://support.liveagent.com/647358-MCP-Integration-for-Agents"
+      }
+    ],
+    "notes": "First-party MCP integration is documented.",
+    "verifiedAt": "2026-08-18",
+    "priority": "Easy win",
+    "nativeMcp": true,
+    "sourceQuality": "Official-first"
+  },
+  {
+    "id": 17,
+    "name": "Plain",
+    "slug": "plain",
+    "category": "Support and Helpdesk",
+    "site": "https://plain.com",
+    "what": "API-first customer support platform for customers, threads, messages, labels, SLAs, and support workflows.",
+    "primaryAuth": "Mixed",
+    "authMethods": ["API key", "OAuth2"],
+    "access": "Self-serve",
+    "accessDetail": "Developer workspaces and API keys are directly available.",
+    "apiStyle": ["GraphQL", "Webhooks"],
+    "breadth": "Broad",
+    "mcp": "Official",
+    "mcpScope": "Action",
+    "verdict": "Ready",
+    "blocker": "GraphQL schema complexity, customer-message safety, and tenant permissions.",
+    "confidence": "High",
+    "evidence": [
+      {
+        "label": "GraphQL authentication",
+        "url": "https://www.plain.com/docs/graphql/authentication"
+      },
+      {
+        "label": "Official MCP server",
+        "url": "https://help.plain.com/article/mcp-server"
+      }
+    ],
+    "notes": "Plain exposes a broad GraphQL API plus a first-party OAuth MCP with read and write tools.",
+    "verifiedAt": "2026-08-18",
+    "priority": "Easy win",
+    "nativeMcp": true,
+    "sourceQuality": "Official-first"
+  },
+  {
+    "id": 18,
+    "name": "Help Scout",
+    "slug": "help-scout",
+    "category": "Support and Helpdesk",
+    "site": "https://helpscout.com",
+    "what": "Helpdesk for mailboxes, conversations, customers, users, workflows, reports, and knowledge base.",
+    "primaryAuth": "OAuth2",
+    "authMethods": ["OAuth2"],
+    "access": "Admin/paid",
+    "accessDetail": "OAuth apps are creatable, but testing needs an active Help Scout account or trial and admin consent.",
+    "apiStyle": ["REST", "Webhooks"],
+    "breadth": "Broad",
+    "mcp": "None",
+    "mcpScope": "None",
+    "verdict": "Ready with constraints",
+    "blocker": "Paid tenant, mailbox permissions, communication risk, and no native MCP verified.",
+    "confidence": "High",
+    "evidence": [
+      {
+        "label": "Source 1",
+        "url": "https://developer.helpscout.com/mailbox-api/overview/authentication/"
+      },
+      {
+        "label": "Source 2",
+        "url": "https://developer.helpscout.com/mailbox-api/"
+      }
+    ],
+    "notes": "Straightforward custom toolkit.",
+    "verifiedAt": "2026-08-18",
+    "priority": "Pilot with guardrails",
+    "nativeMcp": false,
+    "sourceQuality": "Official-first"
+  },
+  {
+    "id": 19,
+    "name": "Gorgias",
+    "slug": "gorgias",
+    "category": "Support and Helpdesk",
+    "site": "https://gorgias.com",
+    "what": "Ecommerce helpdesk for tickets, customers, macros, rules, help center, analytics, and commerce context.",
+    "primaryAuth": "Mixed",
+    "authMethods": ["OAuth2", "API key"],
+    "access": "Admin/paid",
+    "accessDetail": "API access requires a Gorgias helpdesk account; the MCP is available on helpdesk plans.",
+    "apiStyle": ["REST", "Webhooks"],
+    "breadth": "Broad",
+    "mcp": "Official",
+    "mcpScope": "Action",
+    "verdict": "Ready with constraints",
+    "blocker": "Beta maturity, role permissions, customer replies, and settings changes.",
+    "confidence": "High",
+    "evidence": [
+      {
+        "label": "Source 1",
+        "url": "https://developers.gorgias.com/reference/authentication"
+      },
+      {
+        "label": "Source 2",
+        "url": "https://docs.gorgias.com/en-US/connect-your-ai-assistant-to-the-gorgias-mcp-6310546"
+      }
+    ],
+    "notes": "Official MCP is beta and supports ticket and settings actions.",
+    "verifiedAt": "2026-08-18",
+    "priority": "Pilot with guardrails",
+    "nativeMcp": true,
+    "sourceQuality": "Official-first"
+  },
+  {
+    "id": 20,
+    "name": "Gladly",
+    "slug": "gladly",
+    "category": "Support and Helpdesk",
+    "site": "https://gladly.com",
+    "what": "Enterprise customer-service platform for people, conversations, tasks, channels, knowledge, and routing.",
+    "primaryAuth": "Mixed",
+    "authMethods": ["OAuth2", "issued credentials"],
+    "access": "Partner/sales",
+    "accessDetail": "Developer access is associated with an enterprise customer or partner engagement.",
+    "apiStyle": ["REST", "Webhooks"],
+    "breadth": "Broad",
+    "mcp": "None",
+    "mcpScope": "None",
+    "verdict": "Blocked",
+    "blocker": "Enterprise contract, provisioned tenant, limited public sandbox access, and no native MCP verified.",
+    "confidence": "High",
+    "evidence": [
+      {
+        "label": "Source 1",
+        "url": "https://developer.gladly.com/"
+      },
+      {
+        "label": "Source 2",
+        "url": "https://developer.gladly.com/rest-api/authentication/"
+      }
+    ],
+    "notes": "Outreach is the correct next step.",
+    "verifiedAt": "2026-08-18",
+    "priority": "Outreach first",
+    "nativeMcp": false,
+    "sourceQuality": "Official-first"
+  },
+  {
+    "id": 21,
+    "name": "Slack",
+    "slug": "slack",
+    "category": "Communications and Messaging",
+    "site": "https://slack.com",
+    "what": "Team messaging platform for channels, messages, users, files, canvases, workflows, and search.",
+    "primaryAuth": "OAuth2",
+    "authMethods": ["OAuth2", "bot token", "app-level token"],
+    "access": "Self-serve",
+    "accessDetail": "Apps, development workspaces, tokens, and Socket Mode are self-serve.",
+    "apiStyle": ["REST", "Web API", "Events", "Socket Mode"],
+    "breadth": "Broad",
+    "mcp": "Official",
+    "mcpScope": "Action",
+    "verdict": "Ready",
+    "blocker": "Workspace admin policy, granular scopes, message-posting risk, and enterprise controls.",
+    "confidence": "High",
+    "evidence": [
+      {
+        "label": "Source 1",
+        "url": "https://api.slack.com/authentication/oauth-v2"
+      },
+      {
+        "label": "Source 2",
+        "url": "https://api.slack.com/mcp"
+      }
+    ],
+    "notes": "Slack provides a hosted MCP connection.",
+    "verifiedAt": "2026-08-18",
+    "priority": "Easy win",
+    "nativeMcp": true,
+    "sourceQuality": "Official-first"
+  },
+  {
+    "id": 22,
+    "name": "Twilio",
+    "slug": "twilio",
+    "category": "Communications and Messaging",
+    "site": "https://twilio.com",
+    "what": "Communications APIs for messaging, voice, verification, phone numbers, video, and email products.",
+    "primaryAuth": "Mixed",
+    "authMethods": ["Basic", "API key", "OAuth2"],
+    "access": "Self-serve",
+    "accessDetail": "Trial accounts and API credentials are self-serve.",
+    "apiStyle": ["REST", "Webhooks", "WebSocket"],
+    "breadth": "Broad",
+    "mcp": "Official",
+    "mcpScope": "Developer",
+    "verdict": "Ready",
+    "blocker": "The official MCP is mainly API-spec and developer tooling; account actions still need explicit API tools and spend controls.",
+    "confidence": "High",
+    "evidence": [
+      {
+        "label": "Source 1",
+        "url": "https://www.twilio.com/docs/iam/api-keys"
+      },
+      {
+        "label": "Source 2",
+        "url": "https://www.twilio.com/docs/usage/mcp-server"
+      }
+    ],
+    "notes": "Do not mislabel the docs MCP as universal action execution.",
+    "verifiedAt": "2026-08-18",
+    "priority": "Easy win",
+    "nativeMcp": true,
+    "sourceQuality": "Official-first"
+  },
+  {
+    "id": 23,
+    "name": "Zoho Cliq",
+    "slug": "zoho-cliq",
+    "category": "Communications and Messaging",
+    "site": "https://zoho.com/cliq",
+    "what": "Team chat platform for channels, messages, users, bots, commands, widgets, and workflows.",
+    "primaryAuth": "OAuth2",
+    "authMethods": ["OAuth2"],
+    "access": "Self-serve",
+    "accessDetail": "Zoho API Console and Cliq workspaces provide a direct path.",
+    "apiStyle": ["REST", "Webhooks"],
+    "breadth": "Broad",
+    "mcp": "Official",
+    "mcpScope": "Action",
+    "verdict": "Ready",
+    "blocker": "Regional endpoints, workspace permissions, and message-posting confirmation.",
+    "confidence": "High",
+    "evidence": [
+      {
+        "label": "Source 1",
+        "url": "https://www.zoho.com/cliq/help/platform/oauth.html"
+      },
+      {
+        "label": "Source 2",
+        "url": "https://www.zoho.com/cliq/help/platform/zoho-cliq-mcp.html"
+      }
+    ],
+    "notes": "Zoho publishes a native MCP integration.",
+    "verifiedAt": "2026-08-18",
+    "priority": "Easy win",
+    "nativeMcp": true,
+    "sourceQuality": "Official-first"
+  },
+  {
+    "id": 24,
+    "name": "Lark (Larksuite)",
+    "slug": "lark-larksuite",
+    "category": "Communications and Messaging",
+    "site": "https://open.larksuite.com",
+    "what": "Collaboration suite for messaging, calendar, docs, sheets, approvals, contacts, and workplace apps.",
+    "primaryAuth": "OAuth2",
+    "authMethods": ["OAuth2", "tenant token", "app token"],
+    "access": "Review/approval",
+    "accessDetail": "Apps are self-created, but production distribution and sensitive permissions require tenant admin or marketplace review.",
+    "apiStyle": ["REST", "Events", "Webhooks"],
+    "breadth": "Broad",
+    "mcp": "Official",
+    "mcpScope": "Action",
+    "verdict": "Ready with constraints",
+    "blocker": "Tenant approval, scope review, regional endpoints, and broad cross-product permissions.",
+    "confidence": "High",
+    "evidence": [
+      {
+        "label": "Source 1",
+        "url": "https://open.larksuite.com/document/server-docs/authentication-management/access-token/tenant_access_token_internal"
+      },
+      {
+        "label": "Source 2",
+        "url": "https://open.feishu.cn/document/mcp_open_tools/developers-call-remote-mcp-server"
+      }
+    ],
+    "notes": "Official OpenAPI MCP toolkit exists.",
+    "verifiedAt": "2026-08-18",
+    "priority": "Pilot with guardrails",
+    "nativeMcp": true,
+    "sourceQuality": "Official-first"
+  },
+  {
+    "id": 25,
+    "name": "Pumble",
+    "slug": "pumble",
+    "category": "Communications and Messaging",
+    "site": "https://pumble.com",
+    "what": "Team communication platform for workspaces, channels, messages, users, files, and webhooks.",
+    "primaryAuth": "Mixed",
+    "authMethods": ["OAuth2", "bot token"],
+    "access": "Self-serve",
+    "accessDetail": "Workspaces and developer integrations can be created directly.",
+    "apiStyle": ["REST", "Webhooks"],
+    "breadth": "Moderate",
+    "mcp": "Official",
+    "mcpScope": "Action",
+    "verdict": "Ready",
+    "blocker": "Smaller API surface, workspace permissions, and message-write confirmation.",
+    "confidence": "High",
+    "evidence": [
+      {
+        "label": "Source 1",
+        "url": "https://pumble.com/help/integrations/pumble-api/"
+      },
+      {
+        "label": "Source 2",
+        "url": "https://pumble.com/help/integrations/automation-workflow-integrations/how-to-use-the-pumble-mcp-server/"
+      }
+    ],
+    "notes": "First-party MCP is documented.",
+    "verifiedAt": "2026-08-18",
+    "priority": "Easy win",
+    "nativeMcp": true,
+    "sourceQuality": "Official-first"
+  },
+  {
+    "id": 26,
+    "name": "Discord",
+    "slug": "discord",
+    "category": "Communications and Messaging",
+    "site": "https://discord.com",
+    "what": "Community messaging platform for guilds, channels, messages, members, roles, threads, and interactions.",
+    "primaryAuth": "Mixed",
+    "authMethods": ["OAuth2", "bot token"],
+    "access": "Self-serve",
+    "accessDetail": "Developer applications, test servers, bots, and OAuth credentials are self-serve.",
+    "apiStyle": ["REST", "Gateway", "Webhooks"],
+    "breadth": "Broad",
+    "mcp": "Official",
+    "mcpScope": "Docs-only",
+    "verdict": "Ready",
+    "blocker": "Official MCP is developer documentation context, not a general Discord-account action server; bots still need explicit tools.",
+    "confidence": "High",
+    "evidence": [
+      {
+        "label": "Source 1",
+        "url": "https://discord.com/developers/docs/topics/oauth2"
+      },
+      {
+        "label": "Source 2",
+        "url": "https://discord.com/developers/docs/developer-tools/mcp"
+      }
+    ],
+    "notes": "Keep docs MCP separate from action readiness.",
+    "verifiedAt": "2026-08-18",
+    "priority": "Easy win",
+    "nativeMcp": true,
+    "sourceQuality": "Official-first"
+  },
+  {
+    "id": 27,
+    "name": "Telegram",
+    "slug": "telegram",
+    "category": "Communications and Messaging",
+    "site": "https://core.telegram.org",
+    "what": "Messaging platform with Bot API and client APIs for chats, messages, media, updates, and payments.",
+    "primaryAuth": "Token",
+    "authMethods": ["Bot token", "MTProto app credentials"],
+    "access": "Self-serve",
+    "accessDetail": "BotFather issues bot tokens instantly; full client APIs require an app ID and phone-based account.",
+    "apiStyle": ["REST", "Long polling", "Webhooks", "MTProto"],
+    "breadth": "Broad",
+    "mcp": "None",
+    "mcpScope": "None",
+    "verdict": "Ready",
+    "blocker": "No vendor-native MCP verified, bot limitations, abuse controls, and distinction between Bot API and user accounts.",
+    "confidence": "High",
+    "evidence": [
+      {
+        "label": "Source 1",
+        "url": "https://core.telegram.org/bots/api"
+      },
+      {
+        "label": "Source 2",
+        "url": "https://core.telegram.org/api/obtaining_api_id"
+      }
+    ],
+    "notes": "Easy to wrap as bot-scoped tools.",
+    "verifiedAt": "2026-08-18",
+    "priority": "Easy win",
+    "nativeMcp": false,
+    "sourceQuality": "Official-first"
+  },
+  {
+    "id": 28,
+    "name": "WhatsApp Business",
+    "slug": "whatsapp-business",
+    "category": "Communications and Messaging",
+    "site": "https://developers.facebook.com/docs/whatsapp",
+    "what": "Business messaging platform for templates, conversations, media, phone numbers, and webhooks.",
+    "primaryAuth": "OAuth2",
+    "authMethods": ["User token", "system-user token", "temporary test token"],
+    "access": "Review/approval",
+    "accessDetail": "Test numbers are self-serve, while production needs a Meta business, WABA, phone registration, and often verification or review.",
+    "apiStyle": ["Graph API", "Webhooks"],
+    "breadth": "Broad",
+    "mcp": "Official",
+    "mcpScope": "Docs-only",
+    "verdict": "Ready with constraints",
+    "blocker": "Business verification, template review, messaging policy, phone setup, and customer-consent controls.",
+    "confidence": "High",
+    "evidence": [
+      {
+        "label": "Source 1",
+        "url": "https://developers.facebook.com/docs/whatsapp/cloud-api/get-started"
+      },
+      {
+        "label": "Source 2",
+        "url": "https://developers.facebook.com/docs/development/mcp"
+      }
+    ],
+    "notes": "Meta's developer MCP is documentation-oriented; WhatsApp account actions still use the Graph API and reviewed business permissions.",
+    "verifiedAt": "2026-08-18",
+    "priority": "Pilot with guardrails",
+    "nativeMcp": true,
+    "sourceQuality": "Official-first"
+  },
+  {
+    "id": 29,
+    "name": "Aircall",
+    "slug": "aircall",
+    "category": "Communications and Messaging",
+    "site": "https://aircall.io",
+    "what": "Cloud phone and contact-center platform for calls, users, numbers, contacts, tags, and webhooks.",
+    "primaryAuth": "Mixed",
+    "authMethods": ["OAuth2", "Basic with API ID and token"],
+    "access": "Partner/sales",
+    "accessDetail": "Internal credentials require a customer tenant; public OAuth apps use the Technology Partner path.",
+    "apiStyle": ["REST", "Webhooks"],
+    "breadth": "Broad",
+    "mcp": "None",
+    "mcpScope": "None",
+    "verdict": "Ready with constraints",
+    "blocker": "Technology Partner path, tenant access, and no existing Aircall-account MCP; AI Virtual Agent MCP guidance is marked coming soon.",
+    "confidence": "High",
+    "evidence": [
+      {
+        "label": "Source 1",
+        "url": "https://developer.aircall.io/docs/authentication"
+      },
+      {
+        "label": "Source 2",
+        "url": "https://developer.aircall.io/docs/introduction"
+      }
+    ],
+    "notes": "Aircall documents an inbound MCP direction, but marks the implementation guidance coming soon.",
+    "verifiedAt": "2026-08-18",
+    "priority": "Pilot with guardrails",
+    "nativeMcp": false,
+    "sourceQuality": "Official-first"
+  },
+  {
+    "id": 30,
+    "name": "Vonage",
+    "slug": "vonage",
+    "category": "Communications and Messaging",
+    "site": "https://developer.vonage.com",
+    "what": "Communications APIs for SMS, voice, video, verification, messaging, and contact-center workflows.",
+    "primaryAuth": "Mixed",
+    "authMethods": ["API key and secret", "JWT"],
+    "access": "Self-serve",
+    "accessDetail": "Developer accounts, trial credit, and applications are self-serve.",
+    "apiStyle": ["REST", "Webhooks", "WebSocket"],
+    "breadth": "Broad",
+    "mcp": "Official",
+    "mcpScope": "Local action",
+    "verdict": "Ready",
+    "blocker": "Phone-number cost, messaging registration, jurisdictional compliance, and local-tool deployment.",
+    "confidence": "High",
+    "evidence": [
+      {
+        "label": "Source 1",
+        "url": "https://developer.vonage.com/en/getting-started/concepts/authentication"
+      },
+      {
+        "label": "Source 2",
+        "url": "https://developer.vonage.com/en/tools/mcp"
+      }
+    ],
+    "notes": "Official tooling MCP can execute supported account actions.",
+    "verifiedAt": "2026-08-18",
+    "priority": "Easy win",
+    "nativeMcp": true,
+    "sourceQuality": "Official-first"
+  },
+  {
+    "id": 31,
+    "name": "Google Ads",
+    "slug": "google-ads",
+    "category": "Marketing, Ads, Email and Social",
+    "site": "https://developers.google.com/google-ads",
+    "what": "Advertising API for campaigns, accounts, reporting, audiences, budgets, assets, and conversions.",
+    "primaryAuth": "Mixed",
+    "authMethods": ["OAuth2", "developer token"],
+    "access": "Review/approval",
+    "accessDetail": "OAuth is self-serve, but production developer-token access levels are reviewed.",
+    "apiStyle": ["REST", "gRPC"],
+    "breadth": "Broad",
+    "mcp": "Official",
+    "mcpScope": "Read-only",
+    "verdict": "Ready with constraints",
+    "blocker": "Developer-token approval, manager-account setup, policy compliance, and read-only MCP scope.",
+    "confidence": "High",
+    "evidence": [
+      {
+        "label": "Source 1",
+        "url": "https://developers.google.com/google-ads/api/docs/oauth/overview"
+      },
+      {
+        "label": "Source 2",
+        "url": "https://developers.google.com/google-ads/api/docs/model-context-protocol"
+      }
+    ],
+    "notes": "Official MCP was released in 2026 with read-oriented tools.",
+    "verifiedAt": "2026-08-18",
+    "priority": "Pilot with guardrails",
+    "nativeMcp": true,
+    "sourceQuality": "Official-first"
+  },
+  {
+    "id": 32,
+    "name": "Meta Ads",
+    "slug": "meta-ads",
+    "category": "Marketing, Ads, Email and Social",
+    "site": "https://developers.facebook.com/docs/marketing-apis",
+    "what": "Advertising APIs for campaigns, ad sets, creatives, audiences, pixels, insights, and business assets.",
+    "primaryAuth": "OAuth2",
+    "authMethods": ["User token", "system-user token"],
+    "access": "Review/approval",
+    "accessDetail": "Test assets are available, but production permissions often require app review and business verification.",
+    "apiStyle": ["Graph API", "Webhooks"],
+    "breadth": "Broad",
+    "mcp": "Official",
+    "mcpScope": "Docs-only",
+    "verdict": "Ready with constraints",
+    "blocker": "App review, business verification, asset permissions, and policy-sensitive writes.",
+    "confidence": "High",
+    "evidence": [
+      {
+        "label": "Source 1",
+        "url": "https://developers.facebook.com/docs/marketing-apis"
+      },
+      {
+        "label": "Source 2",
+        "url": "https://developers.facebook.com/docs/development/mcp"
+      }
+    ],
+    "notes": "Meta's developer MCP helps with platform documentation; Marketing API account actions still use OAuth and reviewed permissions.",
+    "verifiedAt": "2026-08-18",
+    "priority": "Pilot with guardrails",
+    "nativeMcp": true,
+    "sourceQuality": "Official-first"
+  },
+  {
+    "id": 33,
+    "name": "LinkedIn Ads",
+    "slug": "linkedin-ads",
+    "category": "Marketing, Ads, Email and Social",
+    "site": "https://learn.microsoft.com/linkedin/marketing",
+    "what": "Marketing APIs for ad accounts, campaigns, creatives, audiences, lead forms, and reporting.",
+    "primaryAuth": "OAuth2",
+    "authMethods": ["OAuth2"],
+    "access": "Review/approval",
+    "accessDetail": "A developer app is self-serve, but Marketing API products and expanded access require application and approval.",
+    "apiStyle": ["REST"],
+    "breadth": "Broad",
+    "mcp": "None",
+    "mcpScope": "None",
+    "verdict": "Ready with constraints",
+    "blocker": "Product-access approval is the main blocker, followed by strict scopes and versioning.",
+    "confidence": "High",
+    "evidence": [
+      {
+        "label": "Source 1",
+        "url": "https://learn.microsoft.com/en-us/linkedin/marketing/integrations/marketing-integrations-overview"
+      },
+      {
+        "label": "Source 2",
+        "url": "https://learn.microsoft.com/en-us/linkedin/marketing/increasing-access"
+      }
+    ],
+    "notes": "No vendor-native action MCP verified.",
+    "verifiedAt": "2026-08-18",
+    "priority": "Pilot with guardrails",
+    "nativeMcp": false,
+    "sourceQuality": "Official-first"
+  },
+  {
+    "id": 34,
+    "name": "GoHighLevel",
+    "slug": "gohighlevel",
+    "category": "Marketing, Ads, Email and Social",
+    "site": "https://highlevel.stoplight.io",
+    "what": "Sales and marketing platform for contacts, conversations, calendars, opportunities, workflows, and agencies.",
+    "primaryAuth": "Mixed",
+    "authMethods": ["OAuth2", "private integration token"],
+    "access": "Admin/paid",
+    "accessDetail": "Private integrations are created inside an account; marketplace apps use OAuth and review.",
+    "apiStyle": ["REST", "Webhooks"],
+    "breadth": "Broad",
+    "mcp": "Official",
+    "mcpScope": "Action",
+    "verdict": "Ready with constraints",
+    "blocker": "Agency or location account, marketplace review, and high-impact workflow actions.",
+    "confidence": "High",
+    "evidence": [
+      {
+        "label": "Source 1",
+        "url": "https://marketplace.gohighlevel.com/docs/ghl/oauth/oauth-2-0-v-3/"
+      },
+      {
+        "label": "Source 2",
+        "url": "https://marketplace.gohighlevel.com/docs/other/mcp/index.html"
+      }
+    ],
+    "notes": "LeadConnector exposes an official MCP route.",
+    "verifiedAt": "2026-08-18",
+    "priority": "Pilot with guardrails",
+    "nativeMcp": true,
+    "sourceQuality": "Official-first"
+  },
+  {
+    "id": 35,
+    "name": "Mailchimp",
+    "slug": "mailchimp",
+    "category": "Marketing, Ads, Email and Social",
+    "site": "https://mailchimp.com/developer",
+    "what": "Email marketing platform for audiences, campaigns, automations, templates, reports, and ecommerce events.",
+    "primaryAuth": "Mixed",
+    "authMethods": ["API key", "OAuth2"],
+    "access": "Self-serve",
+    "accessDetail": "API keys and OAuth apps are available from a Mailchimp account.",
+    "apiStyle": ["REST", "Webhooks"],
+    "breadth": "Broad",
+    "mcp": "Official",
+    "mcpScope": "Limited action",
+    "verdict": "Ready",
+    "blocker": "Vendor MCP coverage is mainly Mailchimp Transactional, not the full Marketing API; enforce consent and sending safeguards.",
+    "confidence": "High",
+    "evidence": [
+      {
+        "label": "Source 1",
+        "url": "https://mailchimp.com/developer/marketing/docs/fundamentals/"
+      },
+      {
+        "label": "Source 2",
+        "url": "https://mailchimp.com/developer/transactional/docs/mcp/"
+      }
+    ],
+    "notes": "Do not treat transactional coverage as full platform parity.",
+    "verifiedAt": "2026-08-18",
+    "priority": "Easy win",
+    "nativeMcp": true,
+    "sourceQuality": "Official-first"
+  },
+  {
+    "id": 36,
+    "name": "Klaviyo",
+    "slug": "klaviyo",
+    "category": "Marketing, Ads, Email and Social",
+    "site": "https://developers.klaviyo.com",
+    "what": "Marketing automation and customer-data platform for profiles, events, lists, segments, campaigns, and metrics.",
+    "primaryAuth": "Mixed",
+    "authMethods": ["Private API key", "OAuth2"],
+    "access": "Self-serve",
+    "accessDetail": "Private keys are self-serve; public OAuth apps require review and security checks.",
+    "apiStyle": ["REST", "Webhooks"],
+    "breadth": "Broad",
+    "mcp": "Official",
+    "mcpScope": "Action",
+    "verdict": "Ready",
+    "blocker": "Consent-safe messaging, profile-data sensitivity, OAuth review, and rate limits.",
+    "confidence": "High",
+    "evidence": [
+      {
+        "label": "Source 1",
+        "url": "https://developers.klaviyo.com/en/docs/authenticate_"
+      },
+      {
+        "label": "Source 2",
+        "url": "https://developers.klaviyo.com/en/docs/mcp_server"
+      }
+    ],
+    "notes": "Official remote and local MCP options exist.",
+    "verifiedAt": "2026-08-18",
+    "priority": "Easy win",
+    "nativeMcp": true,
+    "sourceQuality": "Official-first"
+  },
+  {
+    "id": 37,
+    "name": "systeme.io",
+    "slug": "systeme-io",
+    "category": "Marketing, Ads, Email and Social",
+    "site": "https://systeme.io",
+    "what": "Funnel, email, course, affiliate, and sales automation platform.",
+    "primaryAuth": "API key",
+    "authMethods": ["API key"],
+    "access": "Self-serve",
+    "accessDetail": "Users can generate public API credentials from their account.",
+    "apiStyle": ["REST"],
+    "breadth": "Moderate",
+    "mcp": "Official",
+    "mcpScope": "Action",
+    "verdict": "Ready",
+    "blocker": "Narrower surface, email consent, and workflow side effects.",
+    "confidence": "High",
+    "evidence": [
+      {
+        "label": "Source 1",
+        "url": "https://help.systeme.io/article/2323-how-to-use-systeme-io-public-api"
+      },
+      {
+        "label": "Source 2",
+        "url": "https://help.systeme.io/article/9489-how-to-use-systeme-ios-mcp"
+      }
+    ],
+    "notes": "Official MCP setup is published.",
+    "verifiedAt": "2026-08-18",
+    "priority": "Easy win",
+    "nativeMcp": true,
+    "sourceQuality": "Official-first"
+  },
+  {
+    "id": 38,
+    "name": "Pinterest",
+    "slug": "pinterest",
+    "category": "Marketing, Ads, Email and Social",
+    "site": "https://developers.pinterest.com",
+    "what": "Visual discovery and advertising platform for pins, boards, catalogs, analytics, and ads.",
+    "primaryAuth": "OAuth2",
+    "authMethods": [
+      "OAuth2 authorization code",
+      "client credentials for limited endpoints"
+    ],
+    "access": "Review/approval",
+    "accessDetail": "Apps need Trial access approval, then Standard access for production breadth and rate limits.",
+    "apiStyle": ["REST"],
+    "breadth": "Broad",
+    "mcp": "None",
+    "mcpScope": "None",
+    "verdict": "Ready with constraints",
+    "blocker": "Trial and Standard review, business account, policy compliance, and no native MCP verified.",
+    "confidence": "High",
+    "evidence": [
+      {
+        "label": "Source 1",
+        "url": "https://developers.pinterest.com/docs/getting-started/set-up-authentication-and-authorization/"
+      },
+      {
+        "label": "Source 2",
+        "url": "https://developers.pinterest.com/docs/key-concepts/access-tiers/"
+      }
+    ],
+    "notes": "Approval, not engineering, is the bottleneck.",
+    "verifiedAt": "2026-08-18",
+    "priority": "Pilot with guardrails",
+    "nativeMcp": false,
+    "sourceQuality": "Official-first"
+  },
+  {
+    "id": 39,
+    "name": "Threads (Meta)",
+    "slug": "threads-meta",
+    "category": "Marketing, Ads, Email and Social",
+    "site": "https://developers.facebook.com/documentation/threads",
+    "what": "Social publishing API for Threads profiles, posts, replies, mentions, and insights.",
+    "primaryAuth": "OAuth2",
+    "authMethods": ["Meta access token"],
+    "access": "Review/approval",
+    "accessDetail": "Developers can test with app roles; public use follows Meta review and permission rules.",
+    "apiStyle": ["Graph API"],
+    "breadth": "Moderate",
+    "mcp": "None",
+    "mcpScope": "None",
+    "verdict": "Ready with constraints",
+    "blocker": "Meta review, permissions, narrower surface, and no Threads-specific action MCP verified.",
+    "confidence": "High",
+    "evidence": [
+      {
+        "label": "Source 1",
+        "url": "https://developers.facebook.com/docs/threads/get-started"
+      },
+      {
+        "label": "Source 2",
+        "url": "https://developers.facebook.com/docs/development/create-an-app/threads-use-case"
+      }
+    ],
+    "notes": "Meta developer MCP does not imply Threads action coverage.",
+    "verifiedAt": "2026-08-18",
+    "priority": "Pilot with guardrails",
+    "nativeMcp": false,
+    "sourceQuality": "Official-first"
+  },
+  {
+    "id": 40,
+    "name": "SendGrid",
+    "slug": "sendgrid",
+    "category": "Marketing, Ads, Email and Social",
+    "site": "https://sendgrid.com",
+    "what": "Transactional and marketing email platform for sending, templates, contacts, events, suppressions, and analytics.",
+    "primaryAuth": "API key",
+    "authMethods": ["Bearer API key"],
+    "access": "Self-serve",
+    "accessDetail": "Accounts and scoped API keys are self-serve; production sending depends on sender verification.",
+    "apiStyle": ["REST", "Webhooks"],
+    "breadth": "Broad",
+    "mcp": "Official",
+    "mcpScope": "Docs-only",
+    "verdict": "Ready",
+    "blocker": "Official Twilio MCP and skills expose SendGrid developer context, while execution still needs explicit API tools and reputation controls.",
+    "confidence": "High",
+    "evidence": [
+      {
+        "label": "Source 1",
+        "url": "https://www.twilio.com/docs/sendgrid/api-reference/how-to-use-the-sendgrid-v3-api/authentication"
+      },
+      {
+        "label": "Source 2",
+        "url": "https://www.twilio.com/docs/usage/mcp-server"
+      }
+    ],
+    "notes": "Separate documentation support from send actions.",
+    "verifiedAt": "2026-08-18",
+    "priority": "Easy win",
+    "nativeMcp": true,
+    "sourceQuality": "Official-first"
+  },
+  {
+    "id": 41,
+    "name": "Shopify",
+    "slug": "shopify",
+    "category": "Ecommerce",
+    "site": "https://shopify.dev",
+    "what": "Commerce platform for products, orders, customers, inventory, fulfillment, discounts, storefronts, and checkout.",
+    "primaryAuth": "Mixed",
+    "authMethods": ["OAuth2", "custom app token"],
+    "access": "Self-serve",
+    "accessDetail": "Partner accounts and development stores are self-serve; public distribution uses app review.",
+    "apiStyle": [
+      "GraphQL Admin",
+      "Storefront GraphQL",
+      "REST legacy",
+      "Webhooks"
+    ],
+    "breadth": "Broad",
+    "mcp": "Official",
+    "mcpScope": "Storefront",
+    "verdict": "Ready",
+    "blocker": "Admin writes still need GraphQL tools and app scopes; storefront MCP focuses shopping, cart, checkout, and customer tasks.",
+    "confidence": "High",
+    "evidence": [
+      {
+        "label": "Source 1",
+        "url": "https://shopify.dev/docs/apps/build/authentication-authorization"
+      },
+      {
+        "label": "Source 2",
+        "url": "https://shopify.dev/docs/apps/build/storefront-mcp"
+      }
+    ],
+    "notes": "GraphQL Admin is primary because REST Admin is legacy.",
+    "verifiedAt": "2026-08-18",
+    "priority": "Easy win",
+    "nativeMcp": true,
+    "sourceQuality": "Official-first"
+  },
+  {
+    "id": 42,
+    "name": "WooCommerce",
+    "slug": "woocommerce",
+    "category": "Ecommerce",
+    "site": "https://woocommerce.com",
+    "what": "Open-source WordPress commerce platform for products, orders, customers, coupons, shipping, and reports.",
+    "primaryAuth": "Mixed",
+    "authMethods": ["Consumer key and secret", "Basic", "OAuth1 over HTTP"],
+    "access": "Open-source/local",
+    "accessDetail": "Any store owner can install WooCommerce and generate REST credentials.",
+    "apiStyle": ["REST", "Webhooks"],
+    "breadth": "Broad",
+    "mcp": "Official",
+    "mcpScope": "Action",
+    "verdict": "Ready",
+    "blocker": "WordPress plugin/version variance, self-hosting security, refunds, and destructive store actions.",
+    "confidence": "High",
+    "evidence": [
+      {
+        "label": "Source 1",
+        "url": "https://woocommerce.github.io/woocommerce-rest-api-docs/"
+      },
+      {
+        "label": "Source 2",
+        "url": "https://developer.woocommerce.com/docs/features/mcp/"
+      }
+    ],
+    "notes": "WooCommerce now includes native MCP support.",
+    "verifiedAt": "2026-08-18",
+    "priority": "Easy win",
+    "nativeMcp": true,
+    "sourceQuality": "Official-first"
+  },
+  {
+    "id": 43,
+    "name": "BigCommerce",
+    "slug": "bigcommerce",
+    "category": "Ecommerce",
+    "site": "https://developer.bigcommerce.com",
+    "what": "Commerce platform for catalog, orders, customers, inventory, channels, storefronts, carts, and checkout.",
+    "primaryAuth": "Mixed",
+    "authMethods": ["OAuth2", "store access token"],
+    "access": "Self-serve",
+    "accessDetail": "Sandbox stores and app credentials are available through the developer portal and trial path.",
+    "apiStyle": ["REST", "GraphQL", "Webhooks"],
+    "breadth": "Broad",
+    "mcp": "Official",
+    "mcpScope": "Storefront",
+    "verdict": "Ready",
+    "blocker": "Storefront MCP is shopper-focused; admin operations still need scoped API tools and app review.",
+    "confidence": "High",
+    "evidence": [
+      {
+        "label": "Source 1",
+        "url": "https://developer.bigcommerce.com/docs/start/authentication"
+      },
+      {
+        "label": "Source 2",
+        "url": "https://www.bigcommerce.com/blog/storefront-mcp/"
+      }
+    ],
+    "notes": "Official Storefront MCP went live in 2026.",
+    "verifiedAt": "2026-08-18",
+    "priority": "Easy win",
+    "nativeMcp": true,
+    "sourceQuality": "Official-first"
+  },
+  {
+    "id": 44,
+    "name": "Salesforce Commerce Cloud",
+    "slug": "salesforce-commerce-cloud",
+    "category": "Ecommerce",
+    "site": "https://developer.salesforce.com/docs/commerce",
+    "what": "Enterprise commerce platform for products, pricing, inventory, orders, promotions, shoppers, and admin operations.",
+    "primaryAuth": "OAuth2",
+    "authMethods": ["OAuth2 client credentials", "shopper token"],
+    "access": "Admin/paid",
+    "accessDetail": "Requires a contracted Commerce Cloud tenant, API client setup, and administrator-selected roles.",
+    "apiStyle": ["REST", "SCAPI", "OCAPI"],
+    "breadth": "Broad",
+    "mcp": "Official",
+    "mcpScope": "Platform bridge",
+    "verdict": "Ready with constraints",
+    "blocker": "Enterprise tenant, role configuration, API-family complexity, and Salesforce-hosted MCP setup.",
+    "confidence": "Medium",
+    "evidence": [
+      {
+        "label": "Source 1",
+        "url": "https://developer.salesforce.com/docs/commerce/commerce-api/guide/authorization.html"
+      },
+      {
+        "label": "Source 2",
+        "url": "https://developer.salesforce.com/docs/platform/mcp/overview"
+      }
+    ],
+    "notes": "Official Salesforce MCP infrastructure can expose approved Commerce tools, but it is tenant-driven.",
+    "verifiedAt": "2026-08-18",
+    "priority": "Pilot with guardrails",
+    "nativeMcp": true,
+    "sourceQuality": "Official-first"
+  },
+  {
+    "id": 45,
+    "name": "Magento (Adobe Commerce)",
+    "slug": "magento-adobe-commerce",
+    "category": "Ecommerce",
+    "site": "https://developer.adobe.com/commerce",
+    "what": "Open-source and enterprise commerce platform for catalog, customers, carts, orders, inventory, and extensions.",
+    "primaryAuth": "Mixed",
+    "authMethods": [
+      "Integration token",
+      "OAuth1",
+      "OAuth2 server-to-server for SaaS"
+    ],
+    "access": "Open-source/local",
+    "accessDetail": "Magento Open Source is self-hosted; Adobe Commerce cloud features require a paid organization.",
+    "apiStyle": ["REST", "GraphQL", "Webhooks", "Events"],
+    "breadth": "Broad",
+    "mcp": "Official",
+    "mcpScope": "Developer",
+    "verdict": "Ready",
+    "blocker": "Deployment variation, extension complexity, version drift, and developer-focused rather than universal admin MCP tools.",
+    "confidence": "High",
+    "evidence": [
+      {
+        "label": "Source 1",
+        "url": "https://developer.adobe.com/commerce/webapi/get-started/authentication/gs-authentication-token/"
+      },
+      {
+        "label": "Source 2",
+        "url": "https://developer.adobe.com/commerce/extensibility/developer-agent/coding-tools"
+      }
+    ],
+    "notes": "Adobe ships Commerce development MCPs and skills.",
+    "verifiedAt": "2026-08-18",
+    "priority": "Easy win",
+    "nativeMcp": true,
+    "sourceQuality": "Official-first"
+  },
+  {
+    "id": 46,
+    "name": "Squarespace",
+    "slug": "squarespace",
+    "category": "Ecommerce",
+    "site": "https://developers.squarespace.com",
+    "what": "Website and commerce platform for products, orders, inventory, transactions, webhooks, and site extensions.",
+    "primaryAuth": "Mixed",
+    "authMethods": ["OAuth2", "API key"],
+    "access": "Admin/paid",
+    "accessDetail": "Developers can create apps, but live commerce testing requires a Squarespace site and appropriate plan.",
+    "apiStyle": ["REST", "Webhooks"],
+    "breadth": "Moderate",
+    "mcp": "None",
+    "mcpScope": "None",
+    "verdict": "Ready with constraints",
+    "blocker": "Paid site, narrower commerce surface, OAuth app setup, and no vendor-native MCP verified.",
+    "confidence": "High",
+    "evidence": [
+      {
+        "label": "Source 1",
+        "url": "https://developers.squarespace.com/commerce-apis/authentication-and-permissions"
+      },
+      {
+        "label": "Source 2",
+        "url": "https://developers.squarespace.com/"
+      }
+    ],
+    "notes": "No vendor-native MCP was found in official developer documentation.",
+    "verifiedAt": "2026-08-18",
+    "priority": "Pilot with guardrails",
+    "nativeMcp": false,
+    "sourceQuality": "Official-first"
+  },
+  {
+    "id": 47,
+    "name": "Ecwid",
+    "slug": "ecwid",
+    "category": "Ecommerce",
+    "site": "https://api-docs.ecwid.com",
+    "what": "Commerce platform for products, orders, customers, inventory, carts, storefront, and app integrations.",
+    "primaryAuth": "Mixed",
+    "authMethods": ["OAuth2", "store access token"],
+    "access": "Self-serve",
+    "accessDetail": "Developer apps and test stores are available directly.",
+    "apiStyle": ["REST", "Webhooks"],
+    "breadth": "Broad",
+    "mcp": "Community",
+    "mcpScope": "Action",
+    "verdict": "Ready",
+    "blocker": "No vendor-native MCP verified; third-party hosted MCP wrappers exist, so provenance and permissions must be reviewed.",
+    "confidence": "Medium",
+    "evidence": [
+      {
+        "label": "Source 1",
+        "url": "https://docs.ecwid.com/get-started/authentication"
+      },
+      {
+        "label": "Source 2",
+        "url": "https://viasocket.com/mcp/ecwid-by-lightspeed"
+      }
+    ],
+    "notes": "Community status is not counted as vendor-native MCP.",
+    "verifiedAt": "2026-08-18",
+    "priority": "Easy win",
+    "nativeMcp": false,
+    "sourceQuality": "Mixed"
+  },
+  {
+    "id": 48,
+    "name": "Gumroad",
+    "slug": "gumroad",
+    "category": "Ecommerce",
+    "site": "https://gumroad.com/api",
+    "what": "Creator-commerce platform for products, sales, subscribers, licenses, payouts, and resource subscriptions.",
+    "primaryAuth": "Mixed",
+    "authMethods": ["OAuth2", "access token"],
+    "access": "Self-serve",
+    "accessDetail": "Creators can create an OAuth app or access token from their account.",
+    "apiStyle": ["REST", "Webhooks"],
+    "breadth": "Moderate",
+    "mcp": "Community",
+    "mcpScope": "Action",
+    "verdict": "Ready",
+    "blocker": "No official MCP, aging API areas, creator-finance data, and third-party server maintenance.",
+    "confidence": "Medium",
+    "evidence": [
+      {
+        "label": "Source 1",
+        "url": "https://gumroad.com/api"
+      },
+      {
+        "label": "Source 2",
+        "url": "https://github.com/rmarescu/gumroad-mcp"
+      }
+    ],
+    "notes": "Open-source MCP exists but is not vendor maintained.",
+    "verifiedAt": "2026-08-18",
+    "priority": "Easy win",
+    "nativeMcp": false,
+    "sourceQuality": "Mixed"
+  },
+  {
+    "id": 49,
+    "name": "Amazon Selling Partner",
+    "slug": "amazon-selling-partner",
+    "category": "Ecommerce",
+    "site": "https://developer-docs.amazon.com/sp-api",
+    "what": "Marketplace API suite for catalog, listings, orders, inventory, fulfillment, reports, finances, and sellers.",
+    "primaryAuth": "Mixed",
+    "authMethods": ["Login with Amazon OAuth2", "restricted data token"],
+    "access": "Review/approval",
+    "accessDetail": "Sandbox onboarding is available, but production developer registration, roles, seller authorization, and security review are substantial.",
+    "apiStyle": ["REST", "GraphQL for Data Kiosk", "Notifications"],
+    "breadth": "Broad",
+    "mcp": "None",
+    "mcpScope": "None",
+    "verdict": "Ready with constraints",
+    "blocker": "Registration review, restricted-data roles, security controls, seller authorization, and no native MCP verified.",
+    "confidence": "High",
+    "evidence": [
+      {
+        "label": "Source 1",
+        "url": "https://developer-docs.amazon.com/sp-api/docs/authorizing-selling-partner-api-applications"
+      },
+      {
+        "label": "Source 2",
+        "url": "https://developer-docs.amazon.com/sp-api/docs"
+      }
+    ],
+    "notes": "The docs are agent-friendly via llms.txt and OpenAPI, but that is not MCP.",
+    "verifiedAt": "2026-08-18",
+    "priority": "Pilot with guardrails",
+    "nativeMcp": false,
+    "sourceQuality": "Official-first"
+  },
+  {
+    "id": 50,
+    "name": "fanbasis",
+    "slug": "fanbasis",
+    "category": "Ecommerce",
+    "site": "https://fanbasis.com",
+    "what": "Creator monetization and commerce platform for offers, payments, communities, and customer operations.",
+    "primaryAuth": "Other",
+    "authMethods": ["Provisioned credentials"],
+    "access": "Partner/sales",
+    "accessDetail": "The developer documentation is password-gated and no public self-serve credential path was verified.",
+    "apiStyle": ["Unknown"],
+    "breadth": "Unknown",
+    "mcp": "None",
+    "mcpScope": "None",
+    "verdict": "Blocked",
+    "blocker": "Password-gated docs, unclear auth and surface, and no public sandbox.",
+    "confidence": "Low",
+    "evidence": [
+      {
+        "label": "Source 1",
+        "url": "https://dev-docs.fanbasis.com/"
+      },
+      {
+        "label": "Source 2",
+        "url": "https://fanbasis.com/"
+      }
+    ],
+    "notes": "Treat as an outreach discovery item, not a failed research result.",
+    "verifiedAt": "2026-08-18",
+    "priority": "Outreach first",
+    "nativeMcp": false,
+    "sourceQuality": "Official-first"
+  },
+  {
+    "id": 51,
+    "name": "DataForSEO",
+    "slug": "dataforseo",
+    "category": "Data, SEO and Scraping",
+    "site": "https://docs.dataforseo.com",
+    "what": "SEO data APIs for SERPs, keywords, backlinks, domains, business data, app data, and content analysis.",
+    "primaryAuth": "Basic",
+    "authMethods": ["Basic with login and password"],
+    "access": "Self-serve",
+    "accessDetail": "Registration and pay-as-you-go API access are self-serve.",
+    "apiStyle": ["REST", "Webhooks"],
+    "breadth": "Broad",
+    "mcp": "None",
+    "mcpScope": "None",
+    "verdict": "Ready",
+    "blocker": "Usage cost, asynchronous jobs, result size, and no native MCP verified.",
+    "confidence": "High",
+    "evidence": [
+      {
+        "label": "Source 1",
+        "url": "https://docs.dataforseo.com/v3/auth/"
+      },
+      {
+        "label": "Source 2",
+        "url": "https://docs.dataforseo.com/v3/"
+      }
+    ],
+    "notes": "Strong easy-win API despite no native MCP.",
+    "verifiedAt": "2026-08-18",
+    "priority": "Easy win",
+    "nativeMcp": false,
+    "sourceQuality": "Official-first"
+  },
+  {
+    "id": 52,
+    "name": "SE Ranking",
+    "slug": "se-ranking",
+    "category": "Data, SEO and Scraping",
+    "site": "https://seranking.com/api",
+    "what": "SEO platform API for rankings, competitors, audits, backlinks, keywords, and projects.",
+    "primaryAuth": "Token",
+    "authMethods": ["API token"],
+    "access": "Admin/paid",
+    "accessDetail": "API availability is tied to eligible paid plans and account-issued tokens.",
+    "apiStyle": ["REST"],
+    "breadth": "Broad",
+    "mcp": "Official",
+    "mcpScope": "Action",
+    "verdict": "Ready with constraints",
+    "blocker": "Paid entitlement, rate limits, job latency, and SEO data cost.",
+    "confidence": "High",
+    "evidence": [
+      {
+        "label": "Source 1",
+        "url": "https://seranking.com/api/how-to-get-api/"
+      },
+      {
+        "label": "Source 2",
+        "url": "https://seranking.com/api/integrations/mcp/"
+      }
+    ],
+    "notes": "First-party MCP is documented.",
+    "verifiedAt": "2026-08-18",
+    "priority": "Pilot with guardrails",
+    "nativeMcp": true,
+    "sourceQuality": "Official-first"
+  },
+  {
+    "id": 53,
+    "name": "Ahrefs",
+    "slug": "ahrefs",
+    "category": "Data, SEO and Scraping",
+    "site": "https://ahrefs.com/api",
+    "what": "SEO and web-intelligence APIs for backlinks, domains, keywords, rankings, and site metrics.",
+    "primaryAuth": "API key",
+    "authMethods": ["Bearer API key"],
+    "access": "Admin/paid",
+    "accessDetail": "Meaningful API access requires a qualifying paid subscription or API plan.",
+    "apiStyle": ["REST"],
+    "breadth": "Broad",
+    "mcp": "Official",
+    "mcpScope": "Action",
+    "verdict": "Ready with constraints",
+    "blocker": "Paid entitlement, row-unit cost, quotas, and data licensing.",
+    "confidence": "High",
+    "evidence": [
+      {
+        "label": "Source 1",
+        "url": "https://docs.ahrefs.com/docs/api/reference/introduction"
+      },
+      {
+        "label": "Source 2",
+        "url": "https://docs.ahrefs.com/en/mcp/overview"
+      }
+    ],
+    "notes": "Official remote MCP is available.",
+    "verifiedAt": "2026-08-18",
+    "priority": "Pilot with guardrails",
+    "nativeMcp": true,
+    "sourceQuality": "Official-first"
+  },
+  {
+    "id": 54,
+    "name": "MrScraper",
+    "slug": "mrscraper",
+    "category": "Data, SEO and Scraping",
+    "site": "https://docs.mrscraper.com",
+    "what": "Web scraping API for pages, structured extraction, browser rendering, and asynchronous jobs.",
+    "primaryAuth": "Token",
+    "authMethods": ["Bearer token"],
+    "access": "Self-serve",
+    "accessDetail": "Accounts, trial credits, and tokens are self-serve.",
+    "apiStyle": ["REST", "Webhooks"],
+    "breadth": "Moderate",
+    "mcp": "None",
+    "mcpScope": "None",
+    "verdict": "Ready",
+    "blocker": "Robots and site terms, dynamic-page reliability, cost, and no native MCP verified.",
+    "confidence": "High",
+    "evidence": [
+      {
+        "label": "Source 1",
+        "url": "https://docs.mrscraper.com/api-reference/authentication"
+      },
+      {
+        "label": "Source 2",
+        "url": "https://docs.mrscraper.com/"
+      }
+    ],
+    "notes": "Use domain allowlists and legal policy checks.",
+    "verifiedAt": "2026-08-18",
+    "priority": "Easy win",
+    "nativeMcp": false,
+    "sourceQuality": "Official-first"
+  },
+  {
+    "id": 55,
+    "name": "Apify",
+    "slug": "apify",
+    "category": "Data, SEO and Scraping",
+    "site": "https://docs.apify.com",
+    "what": "Cloud platform for web-scraping actors, datasets, crawlers, storage, schedules, and automation.",
+    "primaryAuth": "Mixed",
+    "authMethods": ["API token", "OAuth2"],
+    "access": "Self-serve",
+    "accessDetail": "Free accounts, public actors, tokens, and usage credits are self-serve.",
+    "apiStyle": ["REST", "Webhooks"],
+    "breadth": "Broad",
+    "mcp": "Official",
+    "mcpScope": "Action",
+    "verdict": "Ready",
+    "blocker": "Untrusted actors, scraping legality, spend, long-running jobs, and large datasets.",
+    "confidence": "High",
+    "evidence": [
+      {
+        "label": "Source 1",
+        "url": "https://docs.apify.com/api/v2"
+      },
+      {
+        "label": "Source 2",
+        "url": "https://docs.apify.com/platform/integrations/mcp"
+      }
+    ],
+    "notes": "Official MCP exposes actors and platform operations.",
+    "verifiedAt": "2026-08-18",
+    "priority": "Easy win",
+    "nativeMcp": true,
+    "sourceQuality": "Official-first"
+  },
+  {
+    "id": 56,
+    "name": "Firecrawl",
+    "slug": "firecrawl",
+    "category": "Data, SEO and Scraping",
+    "site": "https://firecrawl.dev",
+    "what": "Web crawling and extraction API for scrape, crawl, map, search, structured data, and browser tasks.",
+    "primaryAuth": "API key",
+    "authMethods": ["Bearer API key"],
+    "access": "Self-serve",
+    "accessDetail": "Cloud trial credits and open-source self-hosting are available.",
+    "apiStyle": ["REST", "Webhooks"],
+    "breadth": "Broad",
+    "mcp": "Official",
+    "mcpScope": "Action",
+    "verdict": "Ready",
+    "blocker": "Target-site policy, spend, prompt injection in pages, and asynchronous crawling.",
+    "confidence": "High",
+    "evidence": [
+      {
+        "label": "Source 1",
+        "url": "https://docs.firecrawl.dev/api-reference/introduction"
+      },
+      {
+        "label": "Source 2",
+        "url": "https://docs.firecrawl.dev/mcp-server"
+      }
+    ],
+    "notes": "Official MCP and open-source deployment exist.",
+    "verifiedAt": "2026-08-18",
+    "priority": "Easy win",
+    "nativeMcp": true,
+    "sourceQuality": "Official-first"
+  },
+  {
+    "id": 57,
+    "name": "Bright Data",
+    "slug": "bright-data",
+    "category": "Data, SEO and Scraping",
+    "site": "https://brightdata.com",
+    "what": "Web data platform for proxies, scraping browser, datasets, SERP, unlocker, and crawlers.",
+    "primaryAuth": "Token",
+    "authMethods": ["API token"],
+    "access": "Admin/paid",
+    "accessDetail": "Trials exist, but production requires paid zones, compliance checks, and configured products.",
+    "apiStyle": ["REST", "WebSocket"],
+    "breadth": "Broad",
+    "mcp": "Official",
+    "mcpScope": "Action",
+    "verdict": "Ready with constraints",
+    "blocker": "Compliance, proxy spend, target-site policy, sensitive datasets, and administrator controls.",
+    "confidence": "High",
+    "evidence": [
+      {
+        "label": "Source 1",
+        "url": "https://docs.brightdata.com/api-reference/authentication"
+      },
+      {
+        "label": "Source 2",
+        "url": "https://docs.brightdata.com/ai/mcp-server/remote/quickstart"
+      }
+    ],
+    "notes": "First-party remote MCP is available.",
+    "verifiedAt": "2026-08-18",
+    "priority": "Pilot with guardrails",
+    "nativeMcp": true,
+    "sourceQuality": "Official-first"
+  },
+  {
+    "id": 58,
+    "name": "Sherlock",
+    "slug": "sherlock",
+    "category": "Data, SEO and Scraping",
+    "site": "https://github.com/sherlock-project/sherlock",
+    "what": "Open-source CLI that checks usernames across many social networks.",
+    "primaryAuth": "None",
+    "authMethods": ["No auth for local use"],
+    "access": "Open-source/local",
+    "accessDetail": "Source and package are public and run locally.",
+    "apiStyle": ["CLI"],
+    "breadth": "Local",
+    "mcp": "Local skill",
+    "mcpScope": "Local action",
+    "verdict": "Ready",
+    "blocker": "False positives, site changes, rate limits, privacy, and misuse prevention.",
+    "confidence": "High",
+    "evidence": [
+      {
+        "label": "Source 1",
+        "url": "https://github.com/sherlock-project/sherlock"
+      }
+    ],
+    "notes": "Best exposed as a sandboxed local agent skill.",
+    "verifiedAt": "2026-08-18",
+    "priority": "Easy win",
+    "nativeMcp": false,
+    "sourceQuality": "Official-first"
+  },
+  {
+    "id": 59,
+    "name": "Waterfall.io",
+    "slug": "waterfall-io",
+    "category": "Data, SEO and Scraping",
+    "site": "https://waterfall.io",
+    "what": "Contact and company intelligence platform for enrichment, identity resolution, and multi-provider data waterfalls.",
+    "primaryAuth": "API key",
+    "authMethods": ["API key"],
+    "access": "Admin/paid",
+    "accessDetail": "API access requires a paid workspace or sales-assisted plan.",
+    "apiStyle": ["REST"],
+    "breadth": "Moderate",
+    "mcp": "None",
+    "mcpScope": "None",
+    "verdict": "Ready with constraints",
+    "blocker": "Paid credits, personal-data handling, provider provenance, and no native MCP verified.",
+    "confidence": "Medium",
+    "evidence": [
+      {
+        "label": "Source 1",
+        "url": "https://waterfall.io/"
+      },
+      {
+        "label": "Source 2",
+        "url": "https://docs.waterfall.io/"
+      }
+    ],
+    "notes": "Documentation footprint is smaller than established data vendors.",
+    "verifiedAt": "2026-08-18",
+    "priority": "Pilot with guardrails",
+    "nativeMcp": false,
+    "sourceQuality": "Official-first"
+  },
+  {
+    "id": 60,
+    "name": "Clay",
+    "slug": "clay",
+    "category": "Data, SEO and Scraping",
+    "site": "https://clay.com",
+    "what": "GTM data and workflow platform for enrichment, research, tables, signals, sequencing, and provider orchestration.",
+    "primaryAuth": "Mixed",
+    "authMethods": ["OAuth2", "API key"],
+    "access": "Admin/paid",
+    "accessDetail": "Workspace and API access depend on plan and administrator settings; new accounts receive limited credits.",
+    "apiStyle": ["REST", "Webhooks", "CLI"],
+    "breadth": "Broad",
+    "mcp": "Official",
+    "mcpScope": "Action",
+    "verdict": "Ready with constraints",
+    "blocker": "Credit burn, provider terms, admin controls, personal data, and workflow side effects.",
+    "confidence": "High",
+    "evidence": [
+      {
+        "label": "Source 1",
+        "url": "https://developers.clay.com/"
+      },
+      {
+        "label": "Source 2",
+        "url": "https://www.clay.com/mcp"
+      }
+    ],
+    "notes": "Official hosted MCP exposes providers and Ops-built functions.",
+    "verifiedAt": "2026-08-18",
+    "priority": "Pilot with guardrails",
+    "nativeMcp": true,
+    "sourceQuality": "Official-first"
+  },
+  {
+    "id": 61,
+    "name": "GitHub",
+    "slug": "github",
+    "category": "Developer, Infra and Data platforms",
+    "site": "https://docs.github.com/rest",
+    "what": "Code-hosting platform for repositories, issues, pull requests, actions, releases, projects, and security.",
+    "primaryAuth": "Mixed",
+    "authMethods": ["OAuth2", "PAT", "GitHub App token"],
+    "access": "Self-serve",
+    "accessDetail": "Accounts, apps, test repositories, and scoped tokens are self-serve.",
+    "apiStyle": ["REST", "GraphQL", "Webhooks"],
+    "breadth": "Broad",
+    "mcp": "Official",
+    "mcpScope": "Action",
+    "verdict": "Ready",
+    "blocker": "Repository permissions, destructive actions, branch protection, secrets, and prompt-injection risk.",
+    "confidence": "High",
+    "evidence": [
+      {
+        "label": "Source 1",
+        "url": "https://docs.github.com/en/authentication"
+      },
+      {
+        "label": "Source 2",
+        "url": "https://github.com/github/github-mcp-server"
+      }
+    ],
+    "notes": "Official MCP covers repository and collaboration operations.",
+    "verifiedAt": "2026-08-18",
+    "priority": "Easy win",
+    "nativeMcp": true,
+    "sourceQuality": "Official-first"
+  },
+  {
+    "id": 62,
+    "name": "Vercel",
+    "slug": "vercel",
+    "category": "Developer, Infra and Data platforms",
+    "site": "https://vercel.com/docs/rest-api",
+    "what": "Cloud platform for projects, deployments, domains, environment variables, logs, analytics, and teams.",
+    "primaryAuth": "Mixed",
+    "authMethods": ["OAuth2", "access token"],
+    "access": "Self-serve",
+    "accessDetail": "Free accounts, teams, projects, and personal tokens are self-serve.",
+    "apiStyle": ["REST", "Webhooks"],
+    "breadth": "Broad",
+    "mcp": "Official",
+    "mcpScope": "Action",
+    "verdict": "Ready",
+    "blocker": "Deployment, domain, environment-secret, and production mutation safeguards.",
+    "confidence": "High",
+    "evidence": [
+      {
+        "label": "Source 1",
+        "url": "https://vercel.com/docs/rest-api"
+      },
+      {
+        "label": "Source 2",
+        "url": "https://vercel.com/docs/agent-resources/vercel-mcp"
+      }
+    ],
+    "notes": "Official remote MCP uses OAuth.",
+    "verifiedAt": "2026-08-18",
+    "priority": "Easy win",
+    "nativeMcp": true,
+    "sourceQuality": "Official-first"
+  },
+  {
+    "id": 63,
+    "name": "Netlify",
+    "slug": "netlify",
+    "category": "Developer, Infra and Data platforms",
+    "site": "https://docs.netlify.com/api",
+    "what": "Cloud platform for sites, deploys, functions, forms, domains, environment variables, and teams.",
+    "primaryAuth": "Mixed",
+    "authMethods": ["OAuth2", "personal access token"],
+    "access": "Self-serve",
+    "accessDetail": "Free accounts and personal tokens are self-serve.",
+    "apiStyle": ["REST", "Webhooks"],
+    "breadth": "Broad",
+    "mcp": "Official",
+    "mcpScope": "Action",
+    "verdict": "Ready",
+    "blocker": "Production deploys, secrets, domains, and team permissions.",
+    "confidence": "High",
+    "evidence": [
+      {
+        "label": "Source 1",
+        "url": "https://docs.netlify.com/api/get-started/"
+      },
+      {
+        "label": "Source 2",
+        "url": "https://docs.netlify.com/welcome/build-with-ai/netlify-mcp-server/"
+      }
+    ],
+    "notes": "Official MCP has remote and local options.",
+    "verifiedAt": "2026-08-18",
+    "priority": "Easy win",
+    "nativeMcp": true,
+    "sourceQuality": "Official-first"
+  },
+  {
+    "id": 64,
+    "name": "Cloudflare",
+    "slug": "cloudflare",
+    "category": "Developer, Infra and Data platforms",
+    "site": "https://developers.cloudflare.com/api",
+    "what": "Internet platform for DNS, zones, Workers, storage, security, analytics, tunnels, and accounts.",
+    "primaryAuth": "API key",
+    "authMethods": ["API token", "legacy global key"],
+    "access": "Self-serve",
+    "accessDetail": "Free accounts and scoped API tokens are self-serve.",
+    "apiStyle": ["REST", "GraphQL Analytics"],
+    "breadth": "Broad",
+    "mcp": "Official",
+    "mcpScope": "Action",
+    "verdict": "Ready",
+    "blocker": "Massive surface, DNS and security blast radius, account scopes, and write confirmation.",
+    "confidence": "High",
+    "evidence": [
+      {
+        "label": "Source 1",
+        "url": "https://developers.cloudflare.com/fundamentals/api/get-started/create-token/"
+      },
+      {
+        "label": "Source 2",
+        "url": "https://developers.cloudflare.com/agents/model-context-protocol/mcp-servers-for-cloudflare/"
+      }
+    ],
+    "notes": "Cloudflare publishes multiple first-party MCP servers.",
+    "verifiedAt": "2026-08-18",
+    "priority": "Easy win",
+    "nativeMcp": true,
+    "sourceQuality": "Official-first"
+  },
+  {
+    "id": 65,
+    "name": "Supabase",
+    "slug": "supabase",
+    "category": "Developer, Infra and Data platforms",
+    "site": "https://supabase.com/docs",
+    "what": "Backend platform for Postgres, auth, storage, edge functions, realtime, projects, and management.",
+    "primaryAuth": "Mixed",
+    "authMethods": [
+      "Project API key",
+      "personal access token",
+      "database credentials"
+    ],
+    "access": "Self-serve",
+    "accessDetail": "Free projects and credentials are self-serve.",
+    "apiStyle": ["REST", "GraphQL", "Postgres", "Realtime"],
+    "breadth": "Broad",
+    "mcp": "Official",
+    "mcpScope": "Action",
+    "verdict": "Ready",
+    "blocker": "Database writes, service-role keys, production-project targeting, and schema migration risk.",
+    "confidence": "High",
+    "evidence": [
+      {
+        "label": "Source 1",
+        "url": "https://supabase.com/docs/guides/api"
+      },
+      {
+        "label": "Source 2",
+        "url": "https://supabase.com/docs/guides/getting-started/mcp"
+      }
+    ],
+    "notes": "Official MCP supports project and database workflows.",
+    "verifiedAt": "2026-08-18",
+    "priority": "Easy win",
+    "nativeMcp": true,
+    "sourceQuality": "Official-first"
+  },
+  {
+    "id": 66,
+    "name": "Neo4j",
+    "slug": "neo4j",
+    "category": "Developer, Infra and Data platforms",
+    "site": "https://neo4j.com/docs/api",
+    "what": "Graph database platform for Cypher queries, graph data, schemas, instances, and analytics.",
+    "primaryAuth": "Mixed",
+    "authMethods": ["Basic", "Bearer token"],
+    "access": "Self-serve",
+    "accessDetail": "Aura free instances and local Community Edition are self-serve.",
+    "apiStyle": ["Query API", "Bolt", "REST management"],
+    "breadth": "Broad",
+    "mcp": "Official",
+    "mcpScope": "Action",
+    "verdict": "Ready",
+    "blocker": "Arbitrary Cypher, data mutation, query cost, and credential scoping.",
+    "confidence": "High",
+    "evidence": [
+      {
+        "label": "Source 1",
+        "url": "https://neo4j.com/docs/query-api/current/authentication/"
+      },
+      {
+        "label": "Source 2",
+        "url": "https://neo4j.com/docs/mcp/current/"
+      }
+    ],
+    "notes": "Official MCP servers are documented.",
+    "verifiedAt": "2026-08-18",
+    "priority": "Easy win",
+    "nativeMcp": true,
+    "sourceQuality": "Official-first"
+  },
+  {
+    "id": 67,
+    "name": "Snowflake",
+    "slug": "snowflake",
+    "category": "Developer, Infra and Data platforms",
+    "site": "https://docs.snowflake.com",
+    "what": "Cloud data platform for warehouses, databases, SQL, data sharing, apps, governance, and AI services.",
+    "primaryAuth": "Mixed",
+    "authMethods": ["OAuth2", "key-pair JWT", "programmatic access token"],
+    "access": "Admin/paid",
+    "accessDetail": "Trials exist, but useful access requires an account, roles, warehouses, and administrator policies.",
+    "apiStyle": ["SQL", "REST", "Snowpark"],
+    "breadth": "Broad",
+    "mcp": "Official",
+    "mcpScope": "Action",
+    "verdict": "Ready with constraints",
+    "blocker": "Role design, warehouse cost, sensitive data, arbitrary SQL, and administrator setup.",
+    "confidence": "High",
+    "evidence": [
+      {
+        "label": "Source 1",
+        "url": "https://docs.snowflake.com/en/developer-guide/snowflake-rest-api/authentication"
+      },
+      {
+        "label": "Source 2",
+        "url": "https://docs.snowflake.com/en/user-guide/snowflake-cortex/cortex-agents-mcp"
+      }
+    ],
+    "notes": "Managed Cortex MCP is available.",
+    "verifiedAt": "2026-08-18",
+    "priority": "Pilot with guardrails",
+    "nativeMcp": true,
+    "sourceQuality": "Official-first"
+  },
+  {
+    "id": 68,
+    "name": "MongoDB Atlas",
+    "slug": "mongodb-atlas",
+    "category": "Developer, Infra and Data platforms",
+    "site": "https://mongodb.com/docs/atlas/api",
+    "what": "Managed database platform for clusters, projects, users, backups, alerts, search, and data operations.",
+    "primaryAuth": "Mixed",
+    "authMethods": [
+      "Service-account OAuth2",
+      "public/private API key",
+      "database user"
+    ],
+    "access": "Self-serve",
+    "accessDetail": "Free Atlas projects and credentials are self-serve.",
+    "apiStyle": ["REST", "Data API", "MongoDB protocol"],
+    "breadth": "Broad",
+    "mcp": "Official",
+    "mcpScope": "Action",
+    "verdict": "Ready",
+    "blocker": "Database mutation, project admin actions, network access lists, and production targeting.",
+    "confidence": "High",
+    "evidence": [
+      {
+        "label": "Source 1",
+        "url": "https://www.mongodb.com/docs/atlas/api/"
+      },
+      {
+        "label": "Source 2",
+        "url": "https://www.mongodb.com/docs/mcp-server/"
+      }
+    ],
+    "notes": "Official MongoDB MCP covers Atlas and database workflows.",
+    "verifiedAt": "2026-08-18",
+    "priority": "Easy win",
+    "nativeMcp": true,
+    "sourceQuality": "Official-first"
+  },
+  {
+    "id": 69,
+    "name": "Datadog",
+    "slug": "datadog",
+    "category": "Developer, Infra and Data platforms",
+    "site": "https://docs.datadoghq.com/api",
+    "what": "Observability platform for metrics, logs, traces, monitors, incidents, dashboards, SLOs, and security.",
+    "primaryAuth": "Mixed",
+    "authMethods": ["API key and app key", "OAuth2"],
+    "access": "Admin/paid",
+    "accessDetail": "Trials exist; API and app keys are created inside an organization with role permissions.",
+    "apiStyle": ["REST", "Webhooks"],
+    "breadth": "Broad",
+    "mcp": "Official",
+    "mcpScope": "Action",
+    "verdict": "Ready with constraints",
+    "blocker": "Sensitive telemetry, monitor mutations, incident actions, and organization-level permissions.",
+    "confidence": "High",
+    "evidence": [
+      {
+        "label": "Source 1",
+        "url": "https://docs.datadoghq.com/api/latest/authentication/"
+      },
+      {
+        "label": "Source 2",
+        "url": "https://docs.datadoghq.com/mcp_server/"
+      }
+    ],
+    "notes": "First-party MCP is available.",
+    "verifiedAt": "2026-08-18",
+    "priority": "Pilot with guardrails",
+    "nativeMcp": true,
+    "sourceQuality": "Official-first"
+  },
+  {
+    "id": 70,
+    "name": "Sentry",
+    "slug": "sentry",
+    "category": "Developer, Infra and Data platforms",
+    "site": "https://docs.sentry.io/api",
+    "what": "Error and performance platform for issues, events, releases, projects, alerts, traces, and organizations.",
+    "primaryAuth": "Mixed",
+    "authMethods": ["OAuth2", "auth token"],
+    "access": "Self-serve",
+    "accessDetail": "Free organizations, developer apps, and scoped tokens are self-serve.",
+    "apiStyle": ["REST", "Webhooks"],
+    "breadth": "Broad",
+    "mcp": "Official",
+    "mcpScope": "Action",
+    "verdict": "Ready",
+    "blocker": "Issue mutations, release actions, sensitive stack data, and organization permissions.",
+    "confidence": "High",
+    "evidence": [
+      {
+        "label": "Source 1",
+        "url": "https://docs.sentry.io/api/auth/"
+      },
+      {
+        "label": "Source 2",
+        "url": "https://docs.sentry.io/ai/mcp/"
+      }
+    ],
+    "notes": "Official remote MCP is available.",
+    "verifiedAt": "2026-08-18",
+    "priority": "Easy win",
+    "nativeMcp": true,
+    "sourceQuality": "Official-first"
+  },
+  {
+    "id": 71,
+    "name": "Notion",
+    "slug": "notion",
+    "category": "Productivity and Project Management",
+    "site": "https://developers.notion.com",
+    "what": "Workspace platform for pages, databases, data sources, blocks, users, comments, and search.",
+    "primaryAuth": "Mixed",
+    "authMethods": ["OAuth2", "internal integration token"],
+    "access": "Self-serve",
+    "accessDetail": "Free workspaces and internal integrations are self-serve; public apps use OAuth review.",
+    "apiStyle": ["REST", "Webhooks"],
+    "breadth": "Broad",
+    "mcp": "Official",
+    "mcpScope": "Action",
+    "verdict": "Ready",
+    "blocker": "Page sharing, user permissions, destructive edits, and rich block structure.",
+    "confidence": "High",
+    "evidence": [
+      {
+        "label": "Source 1",
+        "url": "https://developers.notion.com/guides/get-started/authorization"
+      },
+      {
+        "label": "Source 2",
+        "url": "https://developers.notion.com/guides/mcp/overview"
+      }
+    ],
+    "notes": "Official hosted MCP is available.",
+    "verifiedAt": "2026-08-18",
+    "priority": "Easy win",
+    "nativeMcp": true,
+    "sourceQuality": "Official-first"
+  },
+  {
+    "id": 72,
+    "name": "Airtable",
+    "slug": "airtable",
+    "category": "Productivity and Project Management",
+    "site": "https://airtable.com/developers",
+    "what": "Low-code data platform for bases, tables, records, fields, comments, webhooks, and automations.",
+    "primaryAuth": "Mixed",
+    "authMethods": ["OAuth2", "personal access token"],
+    "access": "Self-serve",
+    "accessDetail": "Free bases, PATs, and OAuth apps are self-serve.",
+    "apiStyle": ["REST", "Webhooks"],
+    "breadth": "Broad",
+    "mcp": "Official",
+    "mcpScope": "Action",
+    "verdict": "Ready",
+    "blocker": "Schema variability, record writes, base permissions, and rate limits.",
+    "confidence": "High",
+    "evidence": [
+      {
+        "label": "Source 1",
+        "url": "https://airtable.com/developers/web/api/authentication"
+      },
+      {
+        "label": "Source 2",
+        "url": "https://support.airtable.com/docs/using-the-airtable-mcp-server"
+      }
+    ],
+    "notes": "First-party MCP is available.",
+    "verifiedAt": "2026-08-18",
+    "priority": "Easy win",
+    "nativeMcp": true,
+    "sourceQuality": "Official-first"
+  },
+  {
+    "id": 73,
+    "name": "Linear",
+    "slug": "linear",
+    "category": "Productivity and Project Management",
+    "site": "https://developers.linear.app",
+    "what": "Issue and product-development platform for teams, projects, cycles, issues, comments, documents, and roadmaps.",
+    "primaryAuth": "Mixed",
+    "authMethods": ["OAuth2", "API key"],
+    "access": "Self-serve",
+    "accessDetail": "Free workspaces, personal keys, and OAuth apps are self-serve.",
+    "apiStyle": ["GraphQL", "Webhooks"],
+    "breadth": "Broad",
+    "mcp": "Official",
+    "mcpScope": "Action",
+    "verdict": "Ready",
+    "blocker": "Workspace permissions, issue mutation, notification noise, and automation loops.",
+    "confidence": "High",
+    "evidence": [
+      {
+        "label": "Source 1",
+        "url": "https://developers.linear.app/docs/graphql/working-with-the-graphql-api"
+      },
+      {
+        "label": "Source 2",
+        "url": "https://linear.app/docs/mcp"
+      }
+    ],
+    "notes": "Official hosted remote MCP exists.",
+    "verifiedAt": "2026-08-18",
+    "priority": "Easy win",
+    "nativeMcp": true,
+    "sourceQuality": "Official-first"
+  },
+  {
+    "id": 74,
+    "name": "Jira",
+    "slug": "jira",
+    "category": "Productivity and Project Management",
+    "site": "https://developer.atlassian.com",
+    "what": "Issue and project platform for work items, projects, comments, users, boards, sprints, and workflows.",
+    "primaryAuth": "Mixed",
+    "authMethods": ["OAuth2", "API token", "Forge auth"],
+    "access": "Self-serve",
+    "accessDetail": "Free Jira sites, developer apps, and OAuth are self-serve; enterprise admins can restrict apps.",
+    "apiStyle": ["REST", "Webhooks"],
+    "breadth": "Broad",
+    "mcp": "Official",
+    "mcpScope": "Action",
+    "verdict": "Ready",
+    "blocker": "Complex permissions, workflow transitions, enterprise app policy, and bulk edits.",
+    "confidence": "High",
+    "evidence": [
+      {
+        "label": "Source 1",
+        "url": "https://developer.atlassian.com/cloud/jira/platform/oauth-2-3lo-apps/"
+      },
+      {
+        "label": "Source 2",
+        "url": "https://developer.atlassian.com/platform/remote-mcp-server/"
+      }
+    ],
+    "notes": "Atlassian Rovo MCP covers Jira and Confluence.",
+    "verifiedAt": "2026-08-18",
+    "priority": "Easy win",
+    "nativeMcp": true,
+    "sourceQuality": "Official-first"
+  },
+  {
+    "id": 75,
+    "name": "Asana",
+    "slug": "asana",
+    "category": "Productivity and Project Management",
+    "site": "https://developers.asana.com",
+    "what": "Work-management platform for tasks, projects, portfolios, goals, teams, users, and attachments.",
+    "primaryAuth": "Mixed",
+    "authMethods": ["OAuth2", "personal access token"],
+    "access": "Self-serve",
+    "accessDetail": "Developer apps, PATs, and free workspaces are self-serve.",
+    "apiStyle": ["REST", "Webhooks"],
+    "breadth": "Broad",
+    "mcp": "Official",
+    "mcpScope": "Action",
+    "verdict": "Ready",
+    "blocker": "Task mutation, team permissions, notification noise, and rate limits.",
+    "confidence": "High",
+    "evidence": [
+      {
+        "label": "Source 1",
+        "url": "https://developers.asana.com/docs/authentication"
+      },
+      {
+        "label": "Source 2",
+        "url": "https://developers.asana.com/docs/using-asanas-mcp-server"
+      }
+    ],
+    "notes": "First-party MCP is available.",
+    "verifiedAt": "2026-08-18",
+    "priority": "Easy win",
+    "nativeMcp": true,
+    "sourceQuality": "Official-first"
+  },
+  {
+    "id": 76,
+    "name": "Monday.com",
+    "slug": "monday-com",
+    "category": "Productivity and Project Management",
+    "site": "https://developer.monday.com",
+    "what": "Work operating system for boards, items, columns, updates, users, workspaces, and automations.",
+    "primaryAuth": "Mixed",
+    "authMethods": ["OAuth2", "API token"],
+    "access": "Self-serve",
+    "accessDetail": "Developer apps and trial accounts provide a self-serve path.",
+    "apiStyle": ["GraphQL", "Webhooks"],
+    "breadth": "Broad",
+    "mcp": "Official",
+    "mcpScope": "Action",
+    "verdict": "Ready",
+    "blocker": "Highly dynamic schemas, complexity quotas, board permissions, and write confirmation.",
+    "confidence": "High",
+    "evidence": [
+      {
+        "label": "Source 1",
+        "url": "https://developer.monday.com/api-reference/docs/authentication"
+      },
+      {
+        "label": "Source 2",
+        "url": "https://developer.monday.com/api-reference/docs/integrate-with-monday-mcp"
+      }
+    ],
+    "notes": "Official remote MCP is available.",
+    "verifiedAt": "2026-08-18",
+    "priority": "Easy win",
+    "nativeMcp": true,
+    "sourceQuality": "Official-first"
+  },
+  {
+    "id": 77,
+    "name": "ClickUp",
+    "slug": "clickup",
+    "category": "Productivity and Project Management",
+    "site": "https://clickup.com/api",
+    "what": "Productivity platform for workspaces, spaces, folders, lists, tasks, comments, docs, goals, and time.",
+    "primaryAuth": "Mixed",
+    "authMethods": ["OAuth2", "personal token"],
+    "access": "Self-serve",
+    "accessDetail": "Free workspaces, personal tokens, and OAuth apps are self-serve.",
+    "apiStyle": ["REST", "Webhooks"],
+    "breadth": "Broad",
+    "mcp": "Official",
+    "mcpScope": "Action",
+    "verdict": "Ready",
+    "blocker": "Hierarchy complexity, permissions, task mutation, and rate limits.",
+    "confidence": "High",
+    "evidence": [
+      {
+        "label": "Source 1",
+        "url": "https://developer.clickup.com/docs/authentication"
+      },
+      {
+        "label": "Source 2",
+        "url": "https://developer.clickup.com/docs/connect-an-ai-assistant-to-clickups-mcp-server"
+      }
+    ],
+    "notes": "First-party remote MCP is available.",
+    "verifiedAt": "2026-08-18",
+    "priority": "Easy win",
+    "nativeMcp": true,
+    "sourceQuality": "Official-first"
+  },
+  {
+    "id": 78,
+    "name": "Coda",
+    "slug": "coda",
+    "category": "Productivity and Project Management",
+    "site": "https://coda.io/developers",
+    "what": "Collaborative document platform for docs, pages, tables, rows, formulas, controls, and automations.",
+    "primaryAuth": "Mixed",
+    "authMethods": ["OAuth2", "API token"],
+    "access": "Self-serve",
+    "accessDetail": "Free docs, API tokens, and OAuth apps are self-serve.",
+    "apiStyle": ["REST", "Webhooks"],
+    "breadth": "Broad",
+    "mcp": "Official",
+    "mcpScope": "Action",
+    "verdict": "Ready",
+    "blocker": "Document sharing, formula side effects, row mutations, and sync-table semantics.",
+    "confidence": "High",
+    "evidence": [
+      {
+        "label": "Source 1",
+        "url": "https://coda.io/developers/apis/v1"
+      },
+      {
+        "label": "Source 2",
+        "url": "https://coda.io/resources/guides/getting_started_with_coda_mcp"
+      }
+    ],
+    "notes": "Official MCP setup is documented.",
+    "verifiedAt": "2026-08-18",
+    "priority": "Easy win",
+    "nativeMcp": true,
+    "sourceQuality": "Official-first"
+  },
+  {
+    "id": 79,
+    "name": "Smartsheet",
+    "slug": "smartsheet",
+    "category": "Productivity and Project Management",
+    "site": "https://smartsheet.com/developers",
+    "what": "Enterprise work-management platform for sheets, rows, reports, dashboards, attachments, and automation.",
+    "primaryAuth": "Mixed",
+    "authMethods": ["OAuth2", "access token"],
+    "access": "Admin/paid",
+    "accessDetail": "API access requires a Smartsheet account; enterprise administrators may restrict integrations.",
+    "apiStyle": ["REST", "Webhooks"],
+    "breadth": "Broad",
+    "mcp": "None",
+    "mcpScope": "None",
+    "verdict": "Ready with constraints",
+    "blocker": "Paid tenant, admin policy, spreadsheet-like schema variability, and no native MCP verified.",
+    "confidence": "High",
+    "evidence": [
+      {
+        "label": "Source 1",
+        "url": "https://developers.smartsheet.com/api/smartsheet/guides/advanced-topics/oauth"
+      },
+      {
+        "label": "Source 2",
+        "url": "https://developers.smartsheet.com/api/smartsheet/openapi"
+      }
+    ],
+    "notes": "Custom wrapper is straightforward.",
+    "verifiedAt": "2026-08-18",
+    "priority": "Pilot with guardrails",
+    "nativeMcp": false,
+    "sourceQuality": "Official-first"
+  },
+  {
+    "id": 80,
+    "name": "Harvest",
+    "slug": "harvest",
+    "category": "Productivity and Project Management",
+    "site": "https://help.getharvest.com/api-v2",
+    "what": "Time tracking and invoicing platform for time entries, projects, clients, users, expenses, and invoices.",
+    "primaryAuth": "Mixed",
+    "authMethods": ["OAuth2", "personal access token"],
+    "access": "Self-serve",
+    "accessDetail": "Trials, personal tokens, and OAuth apps are self-serve.",
+    "apiStyle": ["REST"],
+    "breadth": "Broad",
+    "mcp": "None",
+    "mcpScope": "None",
+    "verdict": "Ready",
+    "blocker": "No native MCP verified; enforce time-entry and invoice write confirmation.",
+    "confidence": "High",
+    "evidence": [
+      {
+        "label": "Source 1",
+        "url": "https://help.getharvest.com/api-v2/authentication-api/authentication/authentication/"
+      },
+      {
+        "label": "Source 2",
+        "url": "https://help.getharvest.com/api-v2/"
+      }
+    ],
+    "notes": "A clean easy-win custom toolkit.",
+    "verifiedAt": "2026-08-18",
+    "priority": "Easy win",
+    "nativeMcp": false,
+    "sourceQuality": "Official-first"
+  },
+  {
+    "id": 81,
+    "name": "Stripe",
+    "slug": "stripe",
+    "category": "Finance and Fintech",
+    "site": "https://stripe.com/docs/api",
+    "what": "Payments platform for customers, payments, subscriptions, invoices, products, disputes, and connected accounts.",
+    "primaryAuth": "Mixed",
+    "authMethods": ["Secret API key", "restricted key", "OAuth2"],
+    "access": "Self-serve",
+    "accessDetail": "Test mode, accounts, keys, and Connect apps are self-serve.",
+    "apiStyle": ["REST", "Webhooks"],
+    "breadth": "Broad",
+    "mcp": "Official",
+    "mcpScope": "Action",
+    "verdict": "Ready",
+    "blocker": "Money movement, refunds, disputes, PCI boundaries, test-versus-live mode, and idempotency.",
+    "confidence": "High",
+    "evidence": [
+      {
+        "label": "Source 1",
+        "url": "https://docs.stripe.com/keys"
+      },
+      {
+        "label": "Source 2",
+        "url": "https://docs.stripe.com/mcp"
+      }
+    ],
+    "notes": "Official MCP exists, but financial actions require strict confirmation.",
+    "verifiedAt": "2026-08-18",
+    "priority": "Easy win",
+    "nativeMcp": true,
+    "sourceQuality": "Official-first"
+  },
+  {
+    "id": 82,
+    "name": "Plaid",
+    "slug": "plaid",
+    "category": "Finance and Fintech",
+    "site": "https://plaid.com/docs",
+    "what": "Financial-data platform for bank linking, accounts, transactions, identity, assets, risk, and payments.",
+    "primaryAuth": "Mixed",
+    "authMethods": ["Client ID and secret", "OAuth2 for Dashboard MCP"],
+    "access": "Review/approval",
+    "accessDetail": "Sandbox is self-serve, but live data and products require Production approval and compliance review.",
+    "apiStyle": ["REST", "Webhooks"],
+    "breadth": "Broad",
+    "mcp": "Official",
+    "mcpScope": "Limited action",
+    "verdict": "Ready with constraints",
+    "blocker": "Production approval, financial data, product eligibility, and MCP scope focused on diagnostics and sandbox tooling.",
+    "confidence": "High",
+    "evidence": [
+      {
+        "label": "Source 1",
+        "url": "https://plaid.com/docs/quickstart/"
+      },
+      {
+        "label": "Source 2",
+        "url": "https://plaid.com/docs/resources/mcp/"
+      }
+    ],
+    "notes": "Official Dashboard MCP requires approved Production access.",
+    "verifiedAt": "2026-08-18",
+    "priority": "Pilot with guardrails",
+    "nativeMcp": true,
+    "sourceQuality": "Official-first"
+  },
+  {
+    "id": 83,
+    "name": "Binance",
+    "slug": "binance",
+    "category": "Finance and Fintech",
+    "site": "https://developers.binance.com",
+    "what": "Crypto exchange APIs for market data, account data, orders, wallets, transfers, and trading.",
+    "primaryAuth": "Mixed",
+    "authMethods": ["API key", "HMAC or asymmetric signature"],
+    "access": "Admin/paid",
+    "accessDetail": "Accounts and API keys are self-serve where the service is legally available; trading and withdrawals require KYC and controls.",
+    "apiStyle": ["REST", "WebSocket"],
+    "breadth": "Broad",
+    "mcp": "Official",
+    "mcpScope": "Action",
+    "verdict": "Ready with constraints",
+    "blocker": "Jurisdiction, KYC, trading loss, withdrawal risk, rate limits, and key restrictions.",
+    "confidence": "High",
+    "evidence": [
+      {
+        "label": "Source 1",
+        "url": "https://developers.binance.com/docs/binance-spot-api-docs/rest-api/request-security"
+      },
+      {
+        "label": "Source 2",
+        "url": "https://developers.binance.com/docs/agent"
+      }
+    ],
+    "notes": "Official agent API and MCP-oriented tooling are documented.",
+    "verifiedAt": "2026-08-18",
+    "priority": "Pilot with guardrails",
+    "nativeMcp": true,
+    "sourceQuality": "Official-first"
+  },
+  {
+    "id": 84,
+    "name": "Paygent Connect",
+    "slug": "paygent-connect",
+    "category": "Finance and Fintech",
+    "site": "https://paygent.com",
+    "what": "NMI-powered payment connectivity for merchant processing and payment workflows.",
+    "primaryAuth": "Other",
+    "authMethods": ["Provisioned gateway credentials"],
+    "access": "Partner/sales",
+    "accessDetail": "No clear public developer credential path or sandbox specific to Paygent Connect was verified.",
+    "apiStyle": ["Unknown"],
+    "breadth": "Unknown",
+    "mcp": "None",
+    "mcpScope": "None",
+    "verdict": "Blocked",
+    "blocker": "Ambiguous product identity, NMI dependency, partner provisioning, and sparse public docs.",
+    "confidence": "Low",
+    "evidence": [
+      {
+        "label": "Source 1",
+        "url": "https://www.nmi.com/developers/"
+      },
+      {
+        "label": "Source 2",
+        "url": "https://paygent.com/"
+      }
+    ],
+    "notes": "Requires human outreach before technical scoping.",
+    "verifiedAt": "2026-08-18",
+    "priority": "Outreach first",
+    "nativeMcp": false,
+    "sourceQuality": "Official-first"
+  },
+  {
+    "id": 85,
+    "name": "iPayX",
+    "slug": "ipayx",
+    "category": "Finance and Fintech",
+    "site": "https://ipayx.ai/docs",
+    "what": "AI-oriented payments and financial operations platform with documented API and MCP access.",
+    "primaryAuth": "Mixed",
+    "authMethods": ["API key", "OAuth2"],
+    "access": "Admin/paid",
+    "accessDetail": "Credentials and production use appear tied to an approved customer workspace or paid account.",
+    "apiStyle": ["REST", "MCP tools"],
+    "breadth": "Moderate",
+    "mcp": "Official",
+    "mcpScope": "Action",
+    "verdict": "Ready with constraints",
+    "blocker": "Young documentation footprint, financial controls, customer eligibility, and money movement.",
+    "confidence": "Medium",
+    "evidence": [
+      {
+        "label": "Source 1",
+        "url": "https://www.ipayx.ai/docs"
+      },
+      {
+        "label": "Source 2",
+        "url": "https://www.ipayx.ai/docs/mcp-server"
+      }
+    ],
+    "notes": "Validate commercial and compliance details with the vendor.",
+    "verifiedAt": "2026-08-18",
+    "priority": "Pilot with guardrails",
+    "nativeMcp": true,
+    "sourceQuality": "Official-first"
+  },
+  {
+    "id": 86,
+    "name": "QuickBooks",
+    "slug": "quickbooks",
+    "category": "Finance and Fintech",
+    "site": "https://developer.intuit.com",
+    "what": "Accounting platform for companies, customers, invoices, bills, payments, reports, and bookkeeping data.",
+    "primaryAuth": "OAuth2",
+    "authMethods": ["OAuth2"],
+    "access": "Review/approval",
+    "accessDetail": "Developer accounts and sandbox companies are self-serve; production applications may require Intuit review.",
+    "apiStyle": ["REST", "Webhooks"],
+    "breadth": "Broad",
+    "mcp": "None",
+    "mcpScope": "None",
+    "verdict": "Ready with constraints",
+    "blocker": "Production review, accounting correctness, tenant authorization, sensitive data, and no native MCP verified.",
+    "confidence": "High",
+    "evidence": [
+      {
+        "label": "Source 1",
+        "url": "https://developer.intuit.com/app/developer/qbo/docs/develop/authentication-and-authorization/oauth-2.0"
+      },
+      {
+        "label": "Source 2",
+        "url": "https://developer.intuit.com/app/developer/qbo/docs/api/accounting/all-entities/account"
+      }
+    ],
+    "notes": "High-value custom toolkit after review.",
+    "verifiedAt": "2026-08-18",
+    "priority": "Pilot with guardrails",
+    "nativeMcp": false,
+    "sourceQuality": "Official-first"
+  },
+  {
+    "id": 87,
+    "name": "Xero",
+    "slug": "xero",
+    "category": "Finance and Fintech",
+    "site": "https://developer.xero.com",
+    "what": "Cloud accounting platform for organizations, invoices, contacts, bank transactions, payroll, projects, and reports.",
+    "primaryAuth": "OAuth2",
+    "authMethods": ["OAuth2", "custom connections client credentials"],
+    "access": "Review/approval",
+    "accessDetail": "Apps and trials are self-serve; public production use follows consent, certification, and partner rules.",
+    "apiStyle": ["REST", "Webhooks"],
+    "breadth": "Broad",
+    "mcp": "Official",
+    "mcpScope": "Action",
+    "verdict": "Ready with constraints",
+    "blocker": "Accounting sensitivity, tenant consent, certification, and region-specific payroll.",
+    "confidence": "High",
+    "evidence": [
+      {
+        "label": "Source 1",
+        "url": "https://developer.xero.com/documentation/guides/oauth2/overview/"
+      },
+      {
+        "label": "Source 2",
+        "url": "https://developer.xero.com/documentation/xero-mcp/overview/"
+      }
+    ],
+    "notes": "Official MCP and agent toolkit resources exist.",
+    "verifiedAt": "2026-08-18",
+    "priority": "Pilot with guardrails",
+    "nativeMcp": true,
+    "sourceQuality": "Official-first"
+  },
+  {
+    "id": 88,
+    "name": "Brex",
+    "slug": "brex",
+    "category": "Finance and Fintech",
+    "site": "https://developer.brex.com",
+    "what": "Business finance platform for cards, expenses, reimbursements, travel, budgets, users, and payments.",
+    "primaryAuth": "Mixed",
+    "authMethods": ["OAuth2", "user token", "client credentials"],
+    "access": "Admin/paid",
+    "accessDetail": "API access is tied to a Brex customer account, administrator authorization, or approved partner integration.",
+    "apiStyle": ["REST", "Webhooks", "OpenAPI"],
+    "breadth": "Broad",
+    "mcp": "Official",
+    "mcpScope": "Action",
+    "verdict": "Ready with constraints",
+    "blocker": "Customer eligibility, admin approval, finance controls, and high-risk card or payment actions.",
+    "confidence": "High",
+    "evidence": [
+      {
+        "label": "Source 1",
+        "url": "https://developer.brex.com/guides/authentication"
+      },
+      {
+        "label": "Source 2",
+        "url": "https://developer.brex.com/changelog"
+      }
+    ],
+    "notes": "First-party MCP is beta.",
+    "verifiedAt": "2026-08-18",
+    "priority": "Pilot with guardrails",
+    "nativeMcp": true,
+    "sourceQuality": "Official-first"
+  },
+  {
+    "id": 89,
+    "name": "Ramp",
+    "slug": "ramp",
+    "category": "Finance and Fintech",
+    "site": "https://docs.ramp.com",
+    "what": "Corporate finance platform for cards, expenses, reimbursements, bills, travel, users, and accounting.",
+    "primaryAuth": "OAuth2",
+    "authMethods": ["Client credentials", "authorization code"],
+    "access": "Admin/paid",
+    "accessDetail": "Developers need a Ramp customer or partner account, and administrators authorize apps and scopes.",
+    "apiStyle": ["REST", "Webhooks"],
+    "breadth": "Broad",
+    "mcp": "Official",
+    "mcpScope": "Action",
+    "verdict": "Ready with constraints",
+    "blocker": "Customer account, admin approval, sensitive financial data, and money-moving operations.",
+    "confidence": "High",
+    "evidence": [
+      {
+        "label": "Source 1",
+        "url": "https://docs.ramp.com/developer-api/v1/authorization"
+      },
+      {
+        "label": "Source 2",
+        "url": "https://docs.ramp.com/developer-api/v1/mcp"
+      }
+    ],
+    "notes": "Official remote MCP is available.",
+    "verifiedAt": "2026-08-18",
+    "priority": "Pilot with guardrails",
+    "nativeMcp": true,
+    "sourceQuality": "Official-first"
+  },
+  {
+    "id": 90,
+    "name": "PitchBook",
+    "slug": "pitchbook",
+    "category": "Finance and Fintech",
+    "site": "https://pitchbook.com",
+    "what": "Private-market research platform for companies, deals, investors, funds, people, and market intelligence.",
+    "primaryAuth": "Other",
+    "authMethods": ["Enterprise-issued credentials"],
+    "access": "Partner/sales",
+    "accessDetail": "API and direct-data access are enterprise products sold through PitchBook.",
+    "apiStyle": ["REST", "Data feeds"],
+    "breadth": "Broad",
+    "mcp": "None",
+    "mcpScope": "None",
+    "verdict": "Blocked",
+    "blocker": "Enterprise contract, licensing, redistribution limits, and no self-serve sandbox.",
+    "confidence": "High",
+    "evidence": [
+      {
+        "label": "Source 1",
+        "url": "https://pitchbook.com/products/direct-data"
+      },
+      {
+        "label": "Source 2",
+        "url": "https://pitchbook.com/data"
+      }
+    ],
+    "notes": "Correctly classified as outreach-first.",
+    "verifiedAt": "2026-08-18",
+    "priority": "Outreach first",
+    "nativeMcp": false,
+    "sourceQuality": "Official-first"
+  },
+  {
+    "id": 91,
+    "name": "NotebookLM",
+    "slug": "notebooklm",
+    "category": "AI, Research and Media-native",
+    "site": "https://notebooklm.google",
+    "what": "AI research workspace grounded in uploaded sources, notebooks, audio, and enterprise knowledge.",
+    "primaryAuth": "OAuth2",
+    "authMethods": [
+      "Google OAuth2",
+      "Application Default Credentials",
+      "service account"
+    ],
+    "access": "Admin/paid",
+    "accessDetail": "The programmable NotebookLM Enterprise API is part of Gemini Enterprise and needs a Cloud project, billing, and admin configuration.",
+    "apiStyle": ["REST", "gRPC"],
+    "breadth": "Moderate",
+    "mcp": "None",
+    "mcpScope": "None",
+    "verdict": "Ready with constraints",
+    "blocker": "Enterprise access, v1alpha stability, admin setup, source governance, and no standalone MCP verified.",
+    "confidence": "High",
+    "evidence": [
+      {
+        "label": "Source 1",
+        "url": "https://cloud.google.com/gemini/enterprise/docs/reference/rpc/google.cloud.notebooklm.v1alpha"
+      },
+      {
+        "label": "Source 2",
+        "url": "https://cloud.google.com/gemini/enterprise/docs/authentication"
+      }
+    ],
+    "notes": "Consumer NotebookLM should not be mislabeled as a public self-serve API.",
+    "verifiedAt": "2026-08-18",
+    "priority": "Pilot with guardrails",
+    "nativeMcp": false,
+    "sourceQuality": "Official-first"
+  },
+  {
+    "id": 92,
+    "name": "Otter AI",
+    "slug": "otter-ai",
+    "category": "AI, Research and Media-native",
+    "site": "https://otter.ai",
+    "what": "Meeting transcription platform for recordings, transcripts, summaries, action items, and chat.",
+    "primaryAuth": "OAuth2",
+    "authMethods": ["OAuth2 through MCP connection"],
+    "access": "Partner/sales",
+    "accessDetail": "Otter states it has no general public REST API; official MCP and custom app setup depend on plan and support.",
+    "apiStyle": ["MCP tools"],
+    "breadth": "Moderate",
+    "mcp": "Official",
+    "mcpScope": "Action",
+    "verdict": "Ready with constraints",
+    "blocker": "No public REST API, plan eligibility, support-gated setup, and sensitive meeting data.",
+    "confidence": "High",
+    "evidence": [
+      {
+        "label": "Source 1",
+        "url": "https://help.otter.ai/hc/en-us/articles/35287607569687-Otter-MCP-Server"
+      }
+    ],
+    "notes": "MCP, not REST, is the primary agent path.",
+    "verifiedAt": "2026-08-18",
+    "priority": "Pilot with guardrails",
+    "nativeMcp": true,
+    "sourceQuality": "Official-first"
+  },
+  {
+    "id": 93,
+    "name": "Fathom",
+    "slug": "fathom",
+    "category": "AI, Research and Media-native",
+    "site": "https://fathom.video",
+    "what": "AI meeting assistant for recordings, transcripts, summaries, action items, CRM sync, and team insights.",
+    "primaryAuth": "Mixed",
+    "authMethods": ["API key", "OAuth2"],
+    "access": "Self-serve",
+    "accessDetail": "Users can generate an API key in settings; OAuth registration is available for multi-user integrations, and the official MCP uses OAuth.",
+    "apiStyle": ["REST", "Webhooks"],
+    "breadth": "Broad",
+    "mcp": "Official",
+    "mcpScope": "Action",
+    "verdict": "Ready",
+    "blocker": "Meeting privacy, participant consent, workspace permissions, and transcript retention.",
+    "confidence": "High",
+    "evidence": [
+      {
+        "label": "Source 1",
+        "url": "https://developers.fathom.ai/"
+      },
+      {
+        "label": "Source 2",
+        "url": "https://developers.fathom.ai/mcp-docs"
+      }
+    ],
+    "notes": "Official MCP and public REST API are documented.",
+    "verifiedAt": "2026-08-18",
+    "priority": "Easy win",
+    "nativeMcp": true,
+    "sourceQuality": "Official-first"
+  },
+  {
+    "id": 94,
+    "name": "Consensus",
+    "slug": "consensus",
+    "category": "AI, Research and Media-native",
+    "site": "https://consensus.app",
+    "what": "AI academic-search product for finding, synthesizing, and citing peer-reviewed research.",
+    "primaryAuth": "Mixed",
+    "authMethods": ["OAuth2 through MCP", "issued API access"],
+    "access": "Self-serve",
+    "accessDetail": "The official MCP is directly connectable. It works without an account at low limits, with higher limits after free OAuth sign-in; separate API access is request-based.",
+    "apiStyle": ["REST", "MCP tools"],
+    "breadth": "Moderate",
+    "mcp": "Official",
+    "mcpScope": "Action",
+    "verdict": "Ready",
+    "blocker": "Low free-tier quotas, citation fidelity, query pacing, and product-specific corpus coverage.",
+    "confidence": "High",
+    "evidence": [
+      {
+        "label": "Source 1",
+        "url": "https://consensus.app/home/api"
+      },
+      {
+        "label": "Source 2",
+        "url": "https://consensus.app/home/mcp"
+      }
+    ],
+    "notes": "Official MCP is self-serve; direct API access remains a separate request path.",
+    "verifiedAt": "2026-08-18",
+    "priority": "Easy win",
+    "nativeMcp": true,
+    "sourceQuality": "Official-first"
+  },
+  {
+    "id": 95,
+    "name": "Reducto",
+    "slug": "reducto",
+    "category": "AI, Research and Media-native",
+    "site": "https://reducto.ai",
+    "what": "Document ingestion and parsing platform for OCR, layout, tables, extraction, splitting, and structured output.",
+    "primaryAuth": "Mixed",
+    "authMethods": ["API key", "OAuth device flow for MCP"],
+    "access": "Self-serve",
+    "accessDetail": "Developers can sign up, obtain trial credits, and use the API directly.",
+    "apiStyle": ["REST", "Webhooks"],
+    "breadth": "Broad",
+    "mcp": "Official",
+    "mcpScope": "Action",
+    "verdict": "Ready",
+    "blocker": "Document privacy, large files, asynchronous jobs, extraction uncertainty, and credit controls.",
+    "confidence": "High",
+    "evidence": [
+      {
+        "label": "Source 1",
+        "url": "https://docs.reducto.ai/"
+      },
+      {
+        "label": "Source 2",
+        "url": "https://docs.reducto.ai/mcp/overview"
+      }
+    ],
+    "notes": "Official MCP and authentication flow exist.",
+    "verifiedAt": "2026-08-18",
+    "priority": "Easy win",
+    "nativeMcp": true,
+    "sourceQuality": "Official-first"
+  },
+  {
+    "id": 96,
+    "name": "Devin",
+    "slug": "devin",
+    "category": "AI, Research and Media-native",
+    "site": "https://devin.ai",
+    "what": "Autonomous software-engineering agent platform for coding sessions, repositories, tasks, knowledge, and automation.",
+    "primaryAuth": "API key",
+    "authMethods": ["Service-user API key"],
+    "access": "Admin/paid",
+    "accessDetail": "API and MCP require a Devin organization and administrator-issued service-user credentials.",
+    "apiStyle": ["REST", "Webhooks"],
+    "breadth": "Moderate",
+    "mcp": "Official",
+    "mcpScope": "Action",
+    "verdict": "Ready with constraints",
+    "blocker": "Paid organization, repository permissions, cost, and autonomous code-change risk.",
+    "confidence": "High",
+    "evidence": [
+      {
+        "label": "Source 1",
+        "url": "https://docs.devin.ai/api-reference/overview"
+      },
+      {
+        "label": "Source 2",
+        "url": "https://docs.devin.ai/integrations/mcp"
+      }
+    ],
+    "notes": "Official MCP exposes Devin actions to other agents.",
+    "verifiedAt": "2026-08-18",
+    "priority": "Pilot with guardrails",
+    "nativeMcp": true,
+    "sourceQuality": "Official-first"
+  },
+  {
+    "id": 97,
+    "name": "Higgsfield",
+    "slug": "higgsfield",
+    "category": "AI, Research and Media-native",
+    "site": "https://higgsfield.ai",
+    "what": "Generative media suite and CLI for creating, editing, and orchestrating video, images, and content workflows.",
+    "primaryAuth": "Mixed",
+    "authMethods": ["OAuth2", "CLI token"],
+    "access": "Self-serve",
+    "accessDetail": "Users can create an account and install the CLI or MCP integration; generation depends on credits.",
+    "apiStyle": ["CLI", "MCP tools"],
+    "breadth": "Moderate",
+    "mcp": "Official",
+    "mcpScope": "Action",
+    "verdict": "Ready",
+    "blocker": "Credit spend, asynchronous generation, media-safety policy, and large artifacts.",
+    "confidence": "Medium",
+    "evidence": [
+      {
+        "label": "Source 1",
+        "url": "https://higgsfield.ai/cli"
+      },
+      {
+        "label": "Source 2",
+        "url": "https://higgsfield.ai/mcp"
+      }
+    ],
+    "notes": "Official CLI and MCP are published.",
+    "verifiedAt": "2026-08-18",
+    "priority": "Easy win",
+    "nativeMcp": true,
+    "sourceQuality": "Official-first"
+  },
+  {
+    "id": 98,
+    "name": "Mermaid CLI",
+    "slug": "mermaid-cli",
+    "category": "AI, Research and Media-native",
+    "site": "https://github.com/mermaid-js/mermaid-cli",
+    "what": "Open-source command-line renderer that converts Mermaid diagrams into SVG, PNG, or PDF.",
+    "primaryAuth": "None",
+    "authMethods": ["No auth for local use"],
+    "access": "Open-source/local",
+    "accessDetail": "The package and source are public and run locally.",
+    "apiStyle": ["CLI"],
+    "breadth": "Local",
+    "mcp": "Local skill",
+    "mcpScope": "Local action",
+    "verdict": "Ready",
+    "blocker": "Untrusted diagram input, Chromium sandboxing, file paths, and resource limits.",
+    "confidence": "High",
+    "evidence": [
+      {
+        "label": "Source 1",
+        "url": "https://github.com/mermaid-js/mermaid-cli"
+      }
+    ],
+    "notes": "Immediately usable as a sandboxed agent skill.",
+    "verifiedAt": "2026-08-18",
+    "priority": "Easy win",
+    "nativeMcp": false,
+    "sourceQuality": "Official-first"
+  },
+  {
+    "id": 99,
+    "name": "YouTube Transcript",
+    "slug": "youtube-transcript",
+    "category": "AI, Research and Media-native",
+    "site": "https://transcriptapi.com",
+    "what": "Third-party API for YouTube transcripts, channel data, search results, and transcript workflows.",
+    "primaryAuth": "Token",
+    "authMethods": ["Bearer API key"],
+    "access": "Self-serve",
+    "accessDetail": "Developers can sign up for trial credits and an API key.",
+    "apiStyle": ["REST"],
+    "breadth": "Moderate",
+    "mcp": "Official",
+    "mcpScope": "Action",
+    "verdict": "Ready",
+    "blocker": "Third-party dependency, unavailable captions, YouTube policy, rate limits, and content rights.",
+    "confidence": "High",
+    "evidence": [
+      {
+        "label": "Source 1",
+        "url": "https://transcriptapi.com/docs"
+      },
+      {
+        "label": "Source 2",
+        "url": "https://transcriptapi.com/docs/mcp/"
+      }
+    ],
+    "notes": "TranscriptAPI documents its own MCP server.",
+    "verifiedAt": "2026-08-18",
+    "priority": "Easy win",
+    "nativeMcp": true,
+    "sourceQuality": "Official-first"
+  },
+  {
+    "id": 100,
+    "name": "Grain",
+    "slug": "grain",
+    "category": "AI, Research and Media-native",
+    "site": "https://grain.com",
+    "what": "AI meeting-notes platform for recordings, transcripts, summaries, clips, stories, and CRM workflows.",
+    "primaryAuth": "Mixed",
+    "authMethods": ["OAuth2", "API token"],
+    "access": "Self-serve",
+    "accessDetail": "The official MCP works across Free, Starter, Business, and Enterprise plans; deal and coaching tools require higher plans.",
+    "apiStyle": ["REST", "Webhooks"],
+    "breadth": "Broad",
+    "mcp": "Official",
+    "mcpScope": "Action",
+    "verdict": "Ready",
+    "blocker": "Workspace authorization, meeting privacy, participant consent, and premium-only deal or coaching tools.",
+    "confidence": "High",
+    "evidence": [
+      {
+        "label": "Source 1",
+        "url": "https://developers.grain.com/"
+      },
+      {
+        "label": "Source 2",
+        "url": "https://developers.grain.com/mcp"
+      }
+    ],
+    "notes": "Official OAuth MCP is available on free plans for core meeting data.",
+    "verifiedAt": "2026-08-18",
+    "priority": "Easy win",
+    "nativeMcp": true,
+    "sourceQuality": "Official-first"
+  }
+]
